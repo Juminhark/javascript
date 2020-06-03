@@ -1,0 +1,101 @@
+<script>
+
+//타입의 종류는 2가지가 있다 : primitive형(기본타입), object형(객체)
+//Primitive형은 String, Number, Boolean, null, undefined 5가지를 포함한다.
+
+/**************** String ******************/
+//String은 1개 또는 2개의 인용부호로 만들수 있다.
+var a = " I am a string";
+var b ='So am I!';
+
+//String 안에서 인용부호를 포함시키는 방법 : 인용부호 앞에 \ 을쓴다.
+var statement1 = 'He said "JavaScript is a swesome!"';
+var statement1 = "He said \"JavaScript is a swesome!\"";
+/*******************************************/
+
+/***************** Number *****************/
+//Number 는 정수 또는 부동소수점(floating point) 정수 이다.   
+var num1 = 100;
+var num2 = 100.10;
+var num3 = 0.10;
+
+/* floating point(부동소수점은) 
+ * 실수를 컴퓨터 상에서 근사하여 표현할 때 소수점의 위치를 고정하지 않고 그 위치를 나타내는 수를 따로 적는 것 */
+ 
+/*******************************************/
+
+/**************** Boolean *****************/
+var okay = true;
+var fail = false;
+/////////////////////////////////
+
+////////// null and underfined ////////
+//null값으로 정의된것. null타입은 값이 비어있는것을 표현한 값이다.
+var foo = null;
+
+// Undefined 타입은 한번도 값이 할당되지 않은 값의 상태를 표현한다
+/*  undefined 타입 만드는 2가지 방법 
+ * 1. undifined를 변수에 지정한다
+ * 2. 변수에 값을 지정하지 않는다
+ */
+var bar1 = undefined;
+var bar2;
+/********************************************/
+
+/*************** Objects *****************/
+//생성자를 통한 객체 생성
+var person1 = new Object;
+person1.fristName = "John";   //객체가 interface처럼 객체.필드(메서드)를 바로 지정가능.
+person1.lastName = "Doe";
+console.log(person1.firstName + " " + person1.lastName); //John Doe
+
+var person2 = {
+	firstName: "Jane",     //요런형식은 무명클래스 비슷한 방법
+	lastName: "Doe"
+};
+console.log(person2.firstName + " " + person2.lastName); //Jane Doe
+
+//object가 object를 속성으로서 가질수 있다.
+var people = {};
+people.person1 = person1;
+people[ "person2" ] = person2;
+console.log(people[ "person1" ].firstName ); //John
+console.log(people.person2.firstName); //Jane
+
+//속성들은 undefined된 상태로는 만들어지지 않는다.
+var person = { name: "John Doe" };
+console.log(person.email); //undefined
+/******************************************/
+
+/****************** Array ******************/
+//배열은 생성자로 만든다.
+var foo = new Array;
+
+//배열로 정의된 상수 문법으로 배열을 만들수있다.
+var bar = [];
+
+//배열 상수는 길이가 1인 배열을 리턴한다.
+// * javascript안에서의 배열 생성시에는 index개념은 없다?
+var foo = [ 100 ];
+console.log(foo[ 0 ]); //undifined
+console.log(foo.length); //1
+
+//배열생성자로 만든 배열은 주어진 크기만큼 배열을 만든다.
+var bar = new Array(100);
+console.log(bar[ 0 ]);   //undifined
+console.log(bar.length); //100
+
+
+//JavaScript의 typeof 연산자를 사용해서 타입을 검사할수있다.
+// typeof 연산자가 리턴하는것은 string값이다.
+var myValue = [ 1, 2, 3 ];
+console.log(typeof myValue); //object
+console.log(typeof myValue === "number");    //false
+console.log(typeof myValue === "undifined"); //false
+console.log(typeof myValue === "boolean");   //false
+console.log(typeof myValue === "object");    //true
+
+//비교연산자를 통해 null인지 확인 가능
+console.log(myValue === null); //false
+
+</script>

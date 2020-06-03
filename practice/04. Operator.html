@@ -1,0 +1,90 @@
+<script>
+//연결
+var foo = "hello";
+var bar = "world";
+console.log( foo + " " + bar);  //"hello world"
+
+2 * 3;
+2 / 3;
+
+var i = 1;
+console.log( ++i );  //2
+console.log( i );    //2
+
+var i = 1;
+console.log( i++ );  //1  i를 먼저 출력하고 이 이후에 ++ 연산 실행
+console.log( i );    //2
+
+
+var foo = 1;
+var bar = "2";
+console.log( foo + bar );  //12    number + string
+
+var foo = 1;
+var bar = "2";
+console.log ( foo + Number(bar));  //3
+
+console.log( foo + +bar);   //3   string 타입을 number로 변환이 많아서 +연산자를 붙이면 number타입으로 변환
+
+// [Logical AND and OR Operators]
+// java 방식 boolean, c언어 방식은 아래와 같다
+var foo = 1;
+var bar = 0;
+var baz = 2;
+
+
+//값이 있으면  true, 없으면 (=0) false
+// or
+console.log(foo || bar);  //1  true  
+
+console.log(bar || foo);  //1  true
+/* 위아래 차이는 위에는 foo에서 이미 1이 나왔기 때문에 아래보다 연산이 빠르다 */
+
+// and  두값이 true일때만 true
+console.log(foo && bar);  //0  false
+
+console.log(foo && baz);  //2  true
+
+console.log(baz && foo);  //1  true
+
+
+// Do something with foo if foo is truthy.
+// foo && dosomething( foo );
+// foo가 true일때만 뒤에 실행. if문 과 같이 사용할수 있다.
+
+// Set bar to baz if baz is truthy;
+// otherwise, set it to the return value of createBar()
+// baz가 true일때만 Bar()를 생성한 값을 리턴한다
+var bar = baz || createBar();
+
+
+
+// [Comparison Operators]  비교연산자
+var foo = 1;
+var bar = 0;
+var baz = "1";
+var bim = 2;
+
+// equivalent
+console.log(foo == bar);             //false
+console.log(foo != baz);             //false
+console.log(foo == baz);             //true
+// == 값만 비교  
+
+// identical
+console.log(foo === baz);            //false
+console.log(foo !== baz);            //true
+console.log(foo === parseInt(baz));  //true
+// === 타입까지 비교
+
+
+console.log(foo > bim);              //false
+console.log(bim > baz);              //true
+console.log(foo <= baz);             //true
+// 비교연산자
+
+/* string -> number */
+// +baz
+// parsInt(baz)
+// number(baz)
+</script>

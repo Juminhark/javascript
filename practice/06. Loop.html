@@ -1,0 +1,51 @@
+<script>
+for ( var i = 0;i < 5; i++ ){
+	//Logs "try 0", "try 1", ..., "try 4".
+	console.log( "try " + i );
+}
+
+for ( var i = 0, limit = 5; i < limit; i++){
+	//This block will be executed 5 times.
+	console.log ( "for" + i );
+	// Note: The last log will be "Crrently at 4".
+}
+
+var i = 0;
+while( i < 5 ){
+	//This block will be executed 5 times.
+	console.log( "while" + i );
+	i++; //Increment i
+}
+
+var i = -1;
+while ( ++i < 5){
+	//This block will be executed 5 times.
+	console.log( "while" + i );
+}
+
+/* while / do while 차이 while은 0번 이상 do while 1번이상 */
+
+do {
+	// Even though the condition evaluates to false
+	// this loop`s body still execute once.
+	console.log( "Hi there!" );
+}while (false);
+
+//Stopping a loop
+for ( var i = 0; i < 10; i++){
+	if( i>=5 ){
+		break;
+	}
+	console.log("hello");
+}
+
+//Skipping to the next iteration of a loop
+for( var i = 0; i < 10; i++){
+	if(i<5){
+		continue;
+	}
+	//The following statement will only be executed
+	// if the conditional "something" has not been met
+	console.log( "I have been reached" );
+}
+</script>

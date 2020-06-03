@@ -1,0 +1,70 @@
+<script>
+//Function declaration.
+function foo(){
+	// Do something.
+}
+
+
+// function을 변수에 저장하면 변수를 function의 이름처럼 활용가능.
+//Named function expression.
+var foo = function(){
+	//Do something;
+};
+
+
+// [Using Functions]
+//A simple function.
+var greet = function( person, greeting ){
+	var text = greeting + "," + person;
+	console.log(text);
+};
+greet("Rebecca", "Hello");  //"Hello, Rebecca"
+
+
+//A function that returns a value.
+var greet = function( person, greeting ){
+	var text = greeting + "," + person;
+	return text;
+};
+console.log( greet("Rebecca", "Hello")); //"Hello, Rebecca"
+
+//A function that returns another function.
+var greet = function( person, greeting){
+	var text = greeting + "," + person;
+	return function(){
+		console.log( text );	
+	};
+};
+var greeting = greet( "Rebecca", "Hello" );
+greeting(); //"Hello, Rebecca"
+
+//An immeduately-involked function experession.
+(function(){
+	console.log("Hello World");
+})();
+//위랑 같은 개념
+var a = function(){
+	console.log("Hello World");
+}
+a();
+
+//Passing an anonymous function as an argument.
+var myFn = function( fn ){
+	var result = fn();
+	console.log( result );
+};
+//Logs "hello world"
+myFn( function() {
+	return "hello world";
+});
+
+//Passing a named function as an argument
+var myFn = function( fn ){
+	var result = fn();
+	console.log( result );
+};
+var myOtherFn = function(){
+	return "hello world";
+};
+myFn( myOtherFn );  //"hello world"
+</script>

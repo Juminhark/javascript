@@ -1,0 +1,72 @@
+<script>
+// Closures are an extrnsion of the concept of scope. With closures,
+// functions have access to variables that were available in the scope
+// where the function was created.
+
+// Each function executed within the loop will reference
+// the last value stored in i (5).
+// This won`t behave as we want it to - every 100 milliseconds, 5 will alert
+for ( var i = 0; i<5; i++) {
+	setTimeout(function(){console.log(i);}, 100);
+}
+
+// Using a closure to create a new private scope
+// fix: "close" the value of i inside createFunction, so it won`t change
+var createFunction = function( i ){
+	return function(){
+		console.log(i);
+	};
+};
+for( var i = 0; i < 5; i++ ){
+	setTimeout( createFunction( i ), 100);
+}
+
+
+
+// Using a closure to access inner and outer object instances simultaneously.
+// 클로저를 사용하여 내부 및 외부 객체 인스턴스에 동시에 액세스합니다
+var outerObj = {
+	myName: "outer",
+	outerFunction: function(){
+		// Provide a reference to outerObj through innerFunction`s closure
+		// 내부함수의 클로저를 통하여 outerObj의 표현을 제공한다
+		var self = this;
+		var innerObj = {
+			myName: "inner",
+			innerFunction: function(){
+				console.log( self.myName, this.myName );  //"outer inner"
+			}
+		};
+		innerObj.innerFunction();
+		console.log( this.myName );  //"outer"
+	}
+};
+outerObj.outerFunction();
+
+// Let`s manipulates "this" with a basic example.
+var user = "johnsmith";
+var module = {
+		getUser: function(){
+			return this.user;
+		},
+		user: "janedoe"
+};
+// module.getUser() is called where "module" is "this"
+// and "module.user" is returned.
+// janedoe
+console.log(module.getUser());     //janedoe
+
+// let`s now store a reference in the global version of "this"
+// getUser() called, "this" is glabal, "user" is returned
+// johnsmith
+var getUser = module.getUser;     
+console.log(getUser());    //johnsmith
+// window. 이 생략되었다.
+
+// store a ref with "module" bound as "this"
+var boundGetUser = getUser.bind( module );
+// boundGetUser() called, "module" is "this" again, "module.user" returnd.
+// janedoe
+console.log(boundGetUser());     //janedoe
+// module. 이 실행된다.
+</script>

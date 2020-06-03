@@ -1,0 +1,23 @@
+<script>
+//Flow control
+var foo = true;
+var bar = false;
+
+if ( bar ) {
+	// This code will never run.
+	console.log( "hello!" );
+}
+
+if ( bar ) {
+	// This code won`t run.
+} else {
+	if ( foo ){
+		// This code will run.
+	} else {
+		// This code would run if foo and bar were both false.
+	}
+}
+
+
+
+</script>

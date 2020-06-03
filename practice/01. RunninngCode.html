@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<!-- 첫번째 방법 -->
+<!-- 코드는 .js file안에 쓴다. src 주소로 접근된 .js file 안의 코드들은 script tag 통하여 사용 -->
+<script src="/path/to/example.js"></script>
+
+<!-- 두번째 방법 -->
+<!-- 내장된 코드들은 웹페이지가 사용하는 script tag안에 바로 쓴다 window가 전체 로딩이 되기 전에 실행이 된다.-->
+<script>
+	alert("Hello World!");
+</script>
+
+<!-- 해당페이지에서만 사용할때는 두번째방법, 여러페이지에 공동으로 사용할 경우는 첫번째 방법이 좋다. -->
+
+</head>
+<body>
+
+<!-- 세번째 방법 -->
+<!-- Inline code들은 HTML에 바로 쓴다 -->
+<a href="javascript:alert( 'Hello World');">Click Me!</a>
+<button onClick="alert( 'Good Bye World');">Click Me Too!</button>
+
+</body>
+</html>
