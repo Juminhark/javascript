@@ -1,3 +1,5 @@
+// condition : 상태
+
 // == Equal to
 // 5 == 5 true
 // 5 == 4 false
@@ -21,9 +23,9 @@ const access = true;
 const age = 20;
 
 if (access && age >= 18) {
-  console.log("hi");
+	console.log('hi');
 } else {
-  console.log("dont have access");
+	console.log('dont have access');
 }
 
 // && and
@@ -31,10 +33,10 @@ if (access && age >= 18) {
 
 // false , 0 , ""
 
-const name = "";
+const name = '';
 
 if (name) {
-  console.log("value truthy");
+	console.log('value truthy');
 } else {
-  console.log("value falsey");
+	console.log('value falsey');
 }
