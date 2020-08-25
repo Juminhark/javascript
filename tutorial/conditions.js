@@ -1,23 +1,26 @@
-// condition : 상태
+// * condition : 상태 *
 
 // == Equal to
-// 5 == 5 true
-// 5 == 4 false
+console.log(5 == 5); // true
+console.log(5 == 4); // false
 
 // Not equal
-// 4 != 3 true
-// 4 != 4 false
+console.log(4 != 3); //  true
+console.log(4 != 4); //  false
 
-// 5 > 10 false
-// 10 > 6 true
-// 10 >= 10 true
-// 20 <= 20 true
+console.log(5 > 10); //  false
+console.log(10 > 6); //  true
+console.log(10 >= 10); //  true
+console.log(20 <= 20); //  true
 
-// 10 == "10" true
-// 10 === "10" false
+// double equals : 값을 비교 => 잘 사용안함
+// triple equals : 상태 비교
 
-// never ever use double equals
-// use the triple
+console.log(10 == '10'); //  true
+console.log(10 === '10'); //  false
+
+// && : and
+// || : or
 
 const access = true;
 const age = 20;
@@ -25,11 +28,8 @@ const age = 20;
 if (access && age >= 18) {
 	console.log('hi');
 } else {
-	console.log('dont have access');
+	console.log('don`t have access');
 }
-
-// && and
-// || or
 
 // false , 0 , ""
 
@@ -38,5 +38,12 @@ const name = '';
 if (name) {
 	console.log('value truthy');
 } else {
-	console.log('value falsey');
+	console.log('value falsely');
 }
+
+// 과제 : 대문자 상수 올바로 사용하기
+// const birthday = '18.04.1982';
+// const ageCalculator = (day) => { }
+// const age = someCode(birthday);
+
+// > node conditions.js
