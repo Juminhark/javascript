@@ -1,11 +1,5 @@
 // concatenation : 연속
 
-// 한줄 주석 comment
-/*
-  여러줄
-  주석
-*/
-
 const bank1 = 100;
 const bank2 = 50;
 

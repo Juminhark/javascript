@@ -6,6 +6,10 @@ console.log(day); // 5
 console.log(1 / 0); // Infinity : 무한대
 console.log('문자' / 2); // NaN : 계산 에러
 
+// BigInt
+// 끝에 'n'이 붙으면 BigInt형 자료입니다.
+const bigInt = 1234567890123456789012345678901234567890n;
+
 // Strings : 문자형
 const name = 'john';
 console.log(`my name is ${name}`); // 변수를 문자열에 삽입
