@@ -28,3 +28,65 @@
 - 5. prompt, confirm
 - 6. conversion
 - 7. operators
+
+## require vs import (CommonJs와 ES6)
+
+- ES6
+
+```ts
+// 모듈 전체를 export, 파일내 한번만 사용가능하다.
+var module = {};
+export default module
+
+// 모든 속성을 export
+export *;
+
+// 함수를 직접 export
+export function moduleFunc() {};
+var property = "some property";
+export {property};
+
+
+// 모듈 전체를 import
+import module
+import module as myModule
+
+
+// 모든 속성 import
+import * from module
+
+
+// 특정 멤버(함수 등)만 import
+import {moduleFunc, moduleFunc2} from module
+```
+
+- CommonJS
+
+```ts
+// 모듈 전체를 export
+module.exports = module;
+
+// 함수를 직접 export
+exports.moduleFunc = function () {};
+
+// 모듈 전체를 import
+var module = require('./someModule.js');
+
+// 모든 속성 import
+// (위의 module 객체에 모든 속성이 담아져 온다.)
+
+// 특정 멤버(함수 등)만 import, 위의 module을 이용한다.
+module.moduleFunc;
+```
+
+- **왠만하면 CommonJS 사용.**
+
+```ts
+// Do this.
+import * as example from 'example';
+example.fn();
+
+// Don't do this.
+// import { fn } from 'example';
+// fn();
+```
