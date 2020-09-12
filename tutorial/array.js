@@ -40,12 +40,12 @@ console.log(months); //['Jan','Feb','March', 'April', 'May']
 
 //* arr.join([separator = ',']) : Array 합치기
 arr = ['aaa', 'bbb', 'ccc', 'ddd'];
-console.log(arr.join());
-console.log(arr.join(''));
+console.log(arr.join()); // aaa,bbb,ccc,ddd
+console.log(arr.join('')); // aaabbbcccddd
 
 //* arr.toString() : 지정된 배열 및 그 요소를 나타내는 문자열을 반환
 //! Number.toString([radix]) : 숫자를 radix 진수로 표현
-console.log(arr.toString());
+console.log(arr.toString()); // aaa,bbb,ccc,ddd
 console.log((21).toString(2));
 
 //* for in : key
@@ -111,6 +111,10 @@ console.log(allItems);
 const total = items.reduce((currentTotal, item) => {
 	return item.price + currentTotal;
 }, 0);
+const total = items.reduce((currentTotal, item) => {
+	return item.price + currentTotal;
+}, {});
+
 // currentTotal: 누산기, 초기값 = 0
 console.log(total);
 
