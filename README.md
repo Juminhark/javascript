@@ -4,20 +4,52 @@
 
 ## 버젼
 
-- ES3 (1999) : 우리가 흔히 말하는 자바스크립트.
-- ES5 (2009) :
+- ECMAScript 1 (1997)
+- ECMAScript 2 (1998)
+- ECMAScript 3 (1999)
+  - 1. error handling
+- ECMAScript 4 (2000) : 95% user가 Internet Explorer 사용 => 엔진
+  - 1. optional type annotation
+  - 2. enterprise scale
+- ECMAScript 5 (2009) : chrome-JIT(just-in-time compilation)엔진 등장으로 브라우저의 성능개선. => 표준화 필요
   - 1. 배열에 forEach, map, filter, reduce, some, every와 같은 메소드 지원
   - 2. Object에 대한 getter / setter 지원
   - 3. 자바스크립트 strict 모드 지원
   - 4. JSON 지원 ( 과거에는 XML을 사용하다가, json이 뜨면서 지원하게 됨 )
-- ES2015 (ES6) :
-  - 1. let, const 키워드 추가
-  - 2. arrow 문법 지원
-  - 3. iterator / generator 추가
-  - 4. module import / export 추가
-  - 5. Promise 도입
-- ES8 (ECMA2017)
+- ECMAScript 6 (2015) : 우리가 흔히 말하는 자바스크립트.
+  - 1. class
+  - 2. let, const 키워드 추가
+  - 3. arrow function문법 지원
+  - 4. iterator / generator 추가
+  - 5. module import / export 추가
+  - 6. Promise 도입
+- ECMAScript 7 (2016)
+- ECMAScript 8 (2017)
   - 1. async / await
+- ECMAScript 9 (2018)
+- ECMAScript 10 (2019)
+
+TypeScript
+
+## 개발 환경
+
+- 최신 ES 환경을 사용하고 싶은 개발자들을 위해 BABEL 등장
+- BABEL : TypeScript, 최신 ES => ES5, ES6로 변환(Javascript transcompiler)
+
+## 최근 동향
+
+- SPA(Single Page Application) : 1개의 페이지 안에서 데이터를 받아와 필요한 정보만 업데이트
+- SPA를 쉽게 하기 위해 React, Angular, Vue 와 같은 라이브러리, 프레임워크를 사용.
+
+## 이용 분야
+
+- back-end : node.js => deno 작년. javascript => web => server (ES => server 표준화 => CommonJS)
+- mobile : react-native
+- desktop application : electron
+
+## 뜨고 있는 기술
+
+- web assembly : 브라우저에서 동작가능한 유일한 언어 javascript의 대체재. 네이티브에 가까운 저수준 어셈블리 언어. C/C++, Rust 등과 같은 언어의 컴파일 타겟. JavaScript와 함께 실행되며 서로를 보완할 수 있도록 설계.
 
 ### tutorial 순서
 
@@ -31,11 +63,15 @@
 
 ## require vs import (CommonJs와 ES6)
 
+- ES6는 Javascript 표준화. CommonJS는 서버사이드에서 범용화를 위한 표준화.
+
 - ES6
 
 ```ts
 // 모듈 전체를 export, 파일내 한번만 사용가능하다.
-var module = {};
+var module = {
+
+};
 export default module
 
 // 모든 속성을 export
@@ -43,18 +79,16 @@ export *;
 
 // 함수를 직접 export
 export function moduleFunc() {};
+
 var property = "some property";
 export {property};
-
 
 // 모듈 전체를 import
 import module
 import module as myModule
 
-
 // 모든 속성 import
 import * from module
-
 
 // 특정 멤버(함수 등)만 import
 import {moduleFunc, moduleFunc2} from module

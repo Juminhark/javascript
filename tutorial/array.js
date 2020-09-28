@@ -1,12 +1,47 @@
 //* Array 생성
 let arr = new Array(3);
-arr[0] = 0;
-arr[1] = 1;
+console.log(arr); // [ <3 empty items> ]
+console.log(Array.isArray(arr)); // true
+
+let fruits = ['사과', '바나나', '배', '수박'];
+
+//* index로 array의 원소에 접근
+console.log(fruits[0]); // 사과
+let last = fruits[fruits.length - 1];
+console.log(last); // 수박
+
+//* array 앞의 원소 제거
+let first = fruits.shift();
+console.log(first); // 사과
+
+//* array 맨 앞의 원소 추가
+fruits.unshift('멜론');
+console.log(fruits); // [ '멜론', '바나나', '배', '수박' ]
+
+//* array 맨 뒤의 원소 제거
+last = fruits.pop();
+console.log(last); // 수박
+
+//* array 맨 뒤의 원소 추가
+fruits.push('망고');
+console.log(fruits); // [ '멜론', '바나나', '배', '망고' ]
+
+//* index 찾기
+let position = fruits.indexOf('배');
+console.log(position); // 2
+
+//* array 안에서 특정값 1개을 찾아 제거
+if (fruits.includes('배')) {
+	fruits.splice(fruits.indexOf('배'), 1);
+}
+console.log(fruits);
+
+//* array 채우기 : 특정 값으로 모든 원소를 초기화
+console.log(arr.fill(0));
+arr = Array(5).fill(0);
 console.log(arr);
 
-arr = Array(2).fill(0);
-console.log(arr);
-
+//* 2중 array
 arr = Array.from(Array(5), () => Array(3).fill(0));
 console.log(arr);
 
@@ -23,7 +58,7 @@ console.log(str.split()); // ["The quick brown fox jumps over the lazy dog."]
 
 //* arr.slice([beginIndex[, endIndexBefore]])
 // 어떤 배열의 begin부터 end까지(end 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환
-// 원본 배열은 바뀌지 않습니다.
+//! 원본 배열은 바뀌지 않는다 => 복사본을 만들때 사용.
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 console.log(animals.slice(2)); // ["camel", "duck", "elephant"]
 console.log(animals); // [ 'ant', 'bison', 'camel', 'duck', 'elephant' ]
@@ -111,7 +146,7 @@ console.log(allItems);
 const total = items.reduce((currentTotal, item) => {
 	return item.price + currentTotal;
 }, 0);
-const total = items.reduce((currentTotal, item) => {
+const totalObject = items.reduce((currentTotal, item) => {
 	return item.price + currentTotal;
 }, {});
 
@@ -124,3 +159,8 @@ const includesTwo = numbers.includes(2);
 console.log(includesTwo); // true
 console.log(numbers.includes(2, 2)); // false
 console.log([1, 2, NaN].includes(NaN)); // true
+
+//! array의 경계를 넘어간다면, js 엔진은 array를 update
+numbers[9] = 9;
+console.log(numbers); // [ 1, 2, 3, 4, 5, <4 empty items>, 9 ]
+console.log(Object.keys(numbers)); // [ '0', '1', '2', '3', '4', '9' ]
