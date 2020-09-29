@@ -96,6 +96,7 @@ for (const v of arr) {
 }
 
 //* arr.filter()
+//! 원본배열을 훼손하지않는다 => filter() condition 값이 true 인값을 모아 새로운 배열을 만든다.
 const items = [
 	{ name: 'Bike', price: 100 },
 	{ name: 'TV', price: 200 },
@@ -114,9 +115,12 @@ console.log(items);
 console.log(filteredItems);
 
 //* arr.map()
+//! 원본배열을 훼손하지않는다 => filter() condition 값이 true 인값을 모아 새로운 배열을 만든다.
 const itemNames = items.map((item) => {
 	return item.name;
 });
+
+console.log(items);
 console.log(itemNames);
 
 //* arr.find() : 조건에 만족한 1번째 요소를 return
@@ -125,7 +129,7 @@ const foundItem = items.find((item) => {
 });
 console.log(foundItem);
 
-//* arr.forEach()
+//* arr.forEach() : 각 원소에 접근을 해볼때
 items.forEach((item) => {
 	console.log(item.name);
 });
@@ -146,12 +150,13 @@ console.log(allItems);
 const total = items.reduce((currentTotal, item) => {
 	return item.price + currentTotal;
 }, 0);
+
 const totalObject = items.reduce((currentTotal, item) => {
 	return item.price + currentTotal;
 }, {});
 
 // currentTotal: 누산기, 초기값 = 0
-console.log(total);
+// console.log(total);
 
 //* arr.includes(valueToFind[, fromIndex]) : 포함 여부
 const numbers = [1, 2, 3, 4, 5];
