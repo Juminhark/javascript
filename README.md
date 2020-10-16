@@ -124,3 +124,5 @@ example.fn();
 // import { fn } from 'example';
 // fn();
 ```
+
+# [10 Projects](https://www.youtube.com/watch?v=dtKciwk_si4)
