@@ -125,4 +125,16 @@ example.fn();
 // fn();
 ```
 
-# [10 Projects](https://www.youtube.com/watch?v=dtKciwk_si4)
+# [Florin Pop - 10 Projects](https://www.youtube.com/watch?v=dtKciwk_si4)
+ - 1. Countdown Timer
+   - Design: https://uidesigndaily.com/posts/sketch-countdown-timer-day-876
+   - future date
+   - timer
+ - 2. Quiz App
+ - 3. Recipe App
+ - 4. Notes App
+ - 5. Todo App
+ - 6. Movies App
+ - 7. Github Profiles
+ - 8. Password Generator
+ - 9. Weather App
