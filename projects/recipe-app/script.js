@@ -1,6 +1,13 @@
 // html div id로 해당 구역 탐색후 object화
-const meals = document.getElementById('meals');
+const mealsEl = document.getElementById('meals');
 const favoriteContainer = document.getElementById('fav-meals');
+
+const searchTerm = document.getElementById('search-term');
+const searchBtn = document.getElementById('search');
+
+const mealPopup = document.getElementById('meal-popup');
+const mealInfoEl = document.getElementById('meal-info');
+const popupCloseBtn = document.getElementById('close-popup');
 
 const getRandomMeal = async () => {
 	const resp = await fetch(
@@ -9,7 +16,6 @@ const getRandomMeal = async () => {
 
 	const respData = await resp.json();
 	const randomMeal = respData.meals[0];
-	console.log(randomMeal);
 
 	addMeal(randomMeal, true); // 아래칸에 추가
 };
@@ -44,12 +50,28 @@ const addMeal = (mealData, random = false) => {
 			addMealLS(mealData.idMeal);
 			btn.classList.add('active');
 		}
+
+		fetchFavMeals();
+	});
+	meal.addEventListener('click', () => {
+		showMealInfo(mealData);
 	});
 
-	meals.appendChild(meal);
+	mealsEl.appendChild(meal);
 };
 
-getRandomMeal();
+const fetchFavMeals = async () => {
+	// clean the container
+	favoriteContainer.innerHTML = '';
+	const mealIds = getMealsLS();
+
+	for (let i = 0; i < mealIds.length; i++) {
+		const mealId = mealIds[i];
+
+		meal = await getMealById(mealId);
+		addMealToFav(meal);
+	}
+};
 
 const addMealLS = (mealId) => {
 	const mealIds = getMealsLS();
@@ -83,12 +105,6 @@ const getMealById = async (id) => {
 	return meal;
 };
 
-const getMealBySearch = async (term) => {
-	const meals = await fetch(
-		`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`
-	);
-};
-
 const addMealToFav = (mealData) => {
 	const favMeal = document.createElement('li');
 
@@ -98,20 +114,101 @@ const addMealToFav = (mealData) => {
 					alt=${mealData.strMeal}
 				/>
 			<span>${mealData.strMeal}</span>	
+			<button class='clear'><i class="far fa-window-close"></i></button>
 	`;
+
+	const btn = favMeal.querySelector('.clear');
+
+	btn.addEventListener('click', () => {
+		removeMealLS(mealData.idMeal);
+		fetchFavMeals();
+	});
+
+	favMeal.addEventListener('click', () => {
+		showMealInfo(mealData);
+	});
 
 	favoriteContainer.appendChild(favMeal);
 };
 
-const fetchFavMeals = async () => {
-	const mealIds = getMealsLS();
+const getMealBySearch = async (term) => {
+	const resp = await fetch(
+		`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`
+	);
 
-	for (let i = 0; i < mealIds.length; i++) {
-		const mealId = mealIds[i];
+	const respData = await resp.json();
+	const meals = respData.meals;
 
-		meal = await getMealById(mealId);
-		addMealToFav(meal);
-	}
+	return meals;
 };
 
+searchBtn.addEventListener('click', async () => {
+	// clean container
+	mealsEl.innerHTML = '';
+
+	const search = searchTerm.value;
+
+	const meals = await getMealBySearch(search);
+	if (meals) {
+		meals.forEach((meal) => {
+			addMeal(meal);
+		});
+	}
+});
+
+//! Promise{<pending>} state: 'fulfilled' error
+//! async await
+
+const showMealInfo = (mealData) => {
+	// clean it up
+	mealInfoEl.innerHTML = '';
+
+	// update the Meal info
+	const mealEl = document.createElement('div');
+
+	const ingredients = [];
+
+	// get ingredients and measures
+	for (let i = 1; i <= 20; i++) {
+		if (mealData['strIngredient' + i]) {
+			ingredients.push(
+				`${mealData['strIngredient' + i]} - ${mealData['strMeasure' + i]}`
+			);
+		} else {
+			break;
+		}
+	}
+
+	mealEl.innerHTML = `
+        <h1>${mealData.strMeal}</h1>
+        <img
+            src="${mealData.strMealThumb}"
+            alt="${mealData.strMeal}"
+        />
+        <p>
+        ${mealData.strInstructions}
+        </p>
+        <h3>Ingredients:</h3>
+        <ul>
+            ${ingredients
+							.map(
+								(ing) => `
+            <li>${ing}</li>
+            `
+							)
+							.join('')}
+        </ul>
+    `;
+
+	mealInfoEl.appendChild(mealEl);
+
+	// show the popup
+	mealPopup.classList.remove('hidden');
+};
+
+popupCloseBtn.addEventListener('click', () => {
+	mealPopup.classList.add('hidden');
+});
+
+getRandomMeal();
 fetchFavMeals();
