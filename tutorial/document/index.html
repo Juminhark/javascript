@@ -3,18 +3,20 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>document 예제</title>
-		<script src="document.js" defer></script>
+		<title>Title</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<div class="getElementById">
-			<p id="para">어떤 글</p>
-			<button onclick="changeColor('blue');">blue</button>
-			<button onclick="changeColor('red');">red</button>
-		</div>
-		<div class="querySelector">
-			<div id="foo\bar"></div>
-			<div id="foo:bar"></div>
+		<div class="grandparent">
+			<div class="parent">
+				<div class="child"></div>
+				<div class="child"></div>
+			</div>
+			<div class="parent">
+				<div class="child"></div>
+				<div class="child"></div>
+			</div>
 		</div>
 	</body>
 </html>
