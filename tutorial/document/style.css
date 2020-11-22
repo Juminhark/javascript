@@ -12,6 +12,7 @@ body {
 
 .grandparent {
 	background-color: hsl(0, 50%, 50%);
+	border: solid;
 	padding: 1.5rem;
 	width: 50rem;
 	height: 50rem;
@@ -21,18 +22,18 @@ body {
 
 .parent {
 	background-color: hsl(100, 50%, 50%);
-	border: 1rem;
+	border: solid;
 	margin: 2rem;
 	padding: 1.5rem;
-	width: 40rem;
+	width: 42.5rem;
 	height: 20rem;
 }
 
 .child {
 	background-color: hsl(200, 50%, 50%);
-	border: 1rem;
+	border: solid;
 	float: left;
-	width: 12.5rem;
-	height: 10rem;
+	width: 14rem;
+	height: 12rem;
 	margin: 2.5rem;
 }
