@@ -151,12 +151,8 @@ const total = items.reduce((currentTotal, item) => {
 	return item.price + currentTotal;
 }, 0);
 
-const totalObject = items.reduce((currentTotal, item) => {
-	return item.price + currentTotal;
-}, {});
-
 // currentTotal: 누산기, 초기값 = 0
-// console.log(total);
+console.log(total);
 
 //* arr.includes(valueToFind[, fromIndex]) : 포함 여부
 const numbers = [1, 2, 3, 4, 5];
