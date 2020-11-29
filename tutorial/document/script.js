@@ -72,11 +72,22 @@ const changeColor = (element) => {
 // changeColor(grandparent);
 
 //* nextElementSibling
-const childOne = document.querySelector('#child-one');
+// const childOne = document.querySelector('#child-one');
 // changeColor(childOne);
 
-const childTwo = childOne.nextElementSibling;
+// const childTwo = childOne.nextElementSibling;
 // changeColor(childTwo);
 
 //* previousElementSibling
-changeColor(childTwo.previousElementSibling);
+// changeColor(childTwo.previousElementSibling);
+
+//* createElement
+// const grandparent = document.querySelector('.grandparent');
+const grandparent = document.getElementById('grandparent-id');
+const createParent = document.createElement('div');
+createParent.classList.add('parent');
+
+createParent.innerHTML = `<div class="child"></div>
+				<div class="child"></div>`;
+
+grandparent.appendChild(createParent);
