@@ -5,9 +5,9 @@
 // 	element.style.backgroundColor = color;
 // };
 
-const changeColor = (element) => {
-	element.style.backgroundColor = '#333';
-};
+// const changeColor = (element) => {
+// 	element.style.backgroundColor = '#333';
+// };
 
 // changeColor(grandparent);
 
@@ -53,8 +53,8 @@ const changeColor = (element) => {
 // const children = grandparent.querySelectorAll('.child');
 // children.forEach(changeColor);
 
-//* div id 로 querySelector 하려며 '#id-name'
-//* div class 로 querySelector 하려며 '.class-name'
+//! id : '#id-name'
+//! class : '.class-name'
 
 //* Selecting Parents
 // const childOne = document.querySelector('#child-one');
@@ -93,11 +93,89 @@ const changeColor = (element) => {
 // grandparent.appendChild(createParent);
 
 //* Adding Elements
-const childOne = document.querySelector('#child-one');
-childOne.append('Hello');
+// const childOne = document.querySelector('#child-one');
+// childOne.append('Hello');
 
 //* Creating Elements
-const childTwo = childOne.nextElementSibling;
-const div = document.createElement('div');
-div.append('World11');
-childTwo.append(div);
+// const childTwo = childOne.nextElementSibling;
+// const div = document.createElement('div');
+
+//* Modifying Element Text
+// div.innerText = 'Hello World!';
+// div.textContent = 'Hello ';
+
+// childTwo.append(div);
+
+// const divText = document.querySelector('div');
+
+// console.log(divText.textContent);
+// console.log(childOne.innerText);
+// console.log(childTwo.innerHTML);
+
+// childTwo.innerHTML = '<strong>Hello World Strong</strong>';
+// console.log(childTwo.innerHTML);
+
+// const strong = document.createElement('strong');
+// strong.innerText = 'Hello World Strong2';
+
+// childTwo.append(strong);
+
+// console.log(childTwo.innerHTML);
+
+//* Removing Elements
+// strong.remove();
+
+// console.log(childTwo.innerHTML);
+
+// const divStrong = document.querySelector('strong');
+
+// childTwo.removeChild(divStrong);
+
+//* Modifying Element Attributes
+// const childOne = document.querySelector('.child');
+// console.log(childOne.getAttribute('id')); // child-one
+// childOne.setAttribute('id', 'asdasd');
+
+// const parent = document.querySelector('.parent');
+// console.log(parent.innerHTML);
+
+// childOne.id = 'child-one';
+
+// console.log(parent.innerHTML);
+
+// childOne.removeAttribute('id');
+// console.log(parent.innerHTML);
+
+//* Modifying Data Attributes
+// const childTwo = document.querySelector('#child-two');
+// console.log(childTwo.dataset); // DOMStringMap {test: "this is a test", longerName: "asdasd"}
+// console.log(childTwo.dataset.test); // this is a test
+// console.log(childTwo.dataset.longerName); // asdasd
+
+// childTwo.dataset.newName = 'hi';
+
+// const parent = document.querySelector('.parent');
+// console.log(parent.innerHTML);
+
+//* Modifying Element Classes
+// const childOne = document.querySelector('#child-one');
+
+// childOne.classList.add('new-class');
+
+// const parent = document.querySelector('.parent');
+// console.log(parent.innerHTML);
+
+// childOne.classList.remove('new-class');
+// console.log(parent.innerHTML);
+
+// childOne.classList.toggle('h3', true);
+// childOne.classList.toggle('h3', false);
+// console.log(parent.innerHTML);
+
+//* Modifying Element Style
+const childOne = document.querySelector('#child-one');
+
+childOne.innerText = 'hello';
+
+// childOne.style.color = 'red';
+childOne.style.background = 'red';
