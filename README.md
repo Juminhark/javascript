@@ -1,6 +1,21 @@
 # Javascript
 
-- [모던 JavaScript 튜토리얼](https://ko.javascript.info/hello-world)
+- [코어 자바스크립트](https://ko.javascript.info/js)
+- [드림코딩 by 엘리 - 자바스크립트 기초 강의](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
+
+## web 역사
+
+- 1993 : Mosaic Web Browser
+- 1994 : Netscape Navigator (Mosaic 개발팀을 이끌던 Marc Andreessen이 Netscape 설립)
+  - html, css로 만든 web을 link로 이동. ui요소로 정리된 정적인 web.
+- Dom 요소를 조작하는 Scripting 언어를 추가하여 동적인 web idea.
+- 1994.10 : Mocha로 불렸던 LiveScript
+  - (Netscape Navigator안에는 LiveScript를 이해하고 실행하는 LiveScript Engine : InterPreter포함)
+  - 당시 인기있었던 java의 이름을 배껴 LiveScript -> JavaScript로 변경.
+- 1995 : Microsoft에서 JavaScript를 Reverse engineering(binary code를 분석하여 source code를 복원) : JScript 언어를 만듬.
+- 1995 : Microsoft : Internet Explorer 출시
+- 1996 : Netscape Navigator(Javascript), Internet Explorer(JScript) 두 browser에서 잘 작동하도록 만들어야했다.
+- 1997 : Netscape JavaScript를 ECMA International를 통해 표준화.
 
 ## 버젼
 
@@ -8,9 +23,19 @@
 - ECMAScript 2 (1998)
 - ECMAScript 3 (1999)
   - 1. error handling
-- ECMAScript 4 (2000) : 95% user가 Internet Explorer 사용 => 엔진
+  - 2. three equal operator (===)
+- ECMAScript 4 (2000) : 95% user가 Internet Explorer 사용 => ES발전을 차용할 엔진의 개발을 멈춤
+
   - 1. optional type annotation
-  - 2. enterprise scale
+  - 2. Enterprise scale
+
+- Netscape Navigator(Netscape), Internet Explorer(Microsoft), Firefox(mozilla) 의 공존으로 표준화가 진행되지않음.
+- 2004 : AJAX(Asynchronous JavaScript and XML, Jesse James Garrett)
+
+  - [웹페이지를 리로드하지 않고 server에서 데이터를 불러오는 방식.](https://coding-factory.tistory.com/143)
+
+- jQuery : APIs (다양한 browser을 대응하기 위한 수단.)
+
 - ECMAScript 5 (2009) : chrome-JIT(just-in-time compilation)엔진 등장으로 브라우저의 성능개선. => 표준화 필요
   - 1. 배열에 forEach, map, filter, reduce, some, every와 같은 메소드 지원
   - 2. Object에 대한 getter / setter 지원
@@ -23,13 +48,17 @@
   - 4. iterator / generator 추가
   - 5. module import / export 추가
   - 6. Promise 도입
+  - 7. default parameter
 - ECMAScript 7 (2016)
 - ECMAScript 8 (2017)
   - 1. async / await
 - ECMAScript 9 (2018)
 - ECMAScript 10 (2019)
 
-TypeScript
+- 다양한 엔진 Chrome(V8), Firefox(SpiderMonkey), Safari(JSCore), MS Edge(Chakra) 등.
+- Chrome(V8)은 nodeJS, electron 에서도 이용.
+
+- TypeScript
 
 ## 개발 환경
 
