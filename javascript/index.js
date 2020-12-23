@@ -145,7 +145,7 @@ const items = [
 	{ name: 'Zeros', value: 37 },
 ];
 
-// value 기준으로 정렬
+//* value 기준으로 정렬
 const valueItems = items.slice().sort(function (a, b) {
 	if (a.value > b.value) {
 		return 1;
@@ -158,7 +158,7 @@ const valueItems = items.slice().sort(function (a, b) {
 });
 console.log(valueItems);
 
-// name 기준으로 정렬
+//* name 기준으로 정렬
 const nameItems = items.slice().sort(function (a, b) {
 	var nameA = a.name.toUpperCase(); // ignore upper and lowercase
 	var nameB = b.name.toUpperCase(); // ignore upper and lowercase
