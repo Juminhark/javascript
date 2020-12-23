@@ -165,3 +165,52 @@ console.log([1, 2, NaN].includes(NaN)); // true
 numbers[9] = 9;
 console.log(numbers); // [ 1, 2, 3, 4, 5, <4 empty items>, 9 ]
 console.log(Object.keys(numbers)); // [ '0', '1', '2', '3', '4', '9' ]
+
+//* array.sort();
+const numberSort = [4, 2, 5, 1, 3];
+
+console.log(numberSort.slice().sort());
+console.log(
+	numberSort.slice().sort((a, b) => {
+		return b - a;
+	})
+);
+console.log(numberSort);
+
+const items = [
+	{ name: 'Edward', value: 21 },
+	{ name: 'Sharpe', value: 37 },
+	{ name: 'And', value: 45 },
+	{ name: 'The', value: -12 },
+	{ name: 'Magnetic', value: 13 },
+	{ name: 'Zeros', value: 37 },
+];
+
+//* array[object.value] 기준으로 정렬
+const valueItems = items.slice().sort(function (a, b) {
+	if (a.value > b.value) {
+		return 1;
+	}
+	if (a.value < b.value) {
+		return -1;
+	}
+	// a must be equal to b
+	return 0;
+});
+console.log(valueItems);
+
+//* array[object.name] 기준으로 정렬
+const nameItems = items.slice().sort(function (a, b) {
+	var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+	var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+	if (nameA < nameB) {
+		return -1;
+	}
+	if (nameA > nameB) {
+		return 1;
+	}
+
+	// 이름이 같을 경우
+	return 0;
+});
+console.log(nameItems);

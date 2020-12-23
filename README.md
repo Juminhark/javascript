@@ -2,6 +2,8 @@
 
 - [코어 자바스크립트](https://ko.javascript.info/js)
 - [드림코딩 by 엘리 - 자바스크립트 기초 강의](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
+- [nodeJS](https://nodejs.org/docs/latest-v13.x/api/console.html)
+- [MDN web docs](https://developer.mozilla.org/ko/)
 
 ## web 역사
 

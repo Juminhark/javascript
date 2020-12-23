@@ -51,15 +51,15 @@ console.log(10 >= 6); // greater than or equal
 const value1 = false;
 const value2 = 4 < 2;
 
-// || (or), finds tje first truthy value
+//* || (or), finds tje first truthy value
 console.log(`or: ${value1 || value2 || check()}`);
 
-// && (and), finds tje first falsy value
+//* && (and), finds tje first falsy value
 console.log(`and: ${value1 && value2 && check()}`);
 
-// often used to compress long if-statement
-// nullableObject && nullableObject.something
-// object가 존재하면 object 의 요소 사용.
+//* often used to compress long if-statement
+//* nullableObject && nullableObject.something
+//* object가 존재하면 object 의 요소 사용.
 
 function check() {
 	for (let i = 0; i < 10; i++) {
@@ -76,15 +76,15 @@ console.log(!value1);
 const stringFive = '5';
 const numberFive = 5;
 
-// == loose equality, with type conversion
+//* == loose equality, with type conversion
 console.log(stringFive == numberFive);
 console.log(stringFive != numberFive);
 
-// === strict equality, no type conversion
+//* === strict equality, no type conversion
 console.log(stringFive === numberFive);
 console.log(stringFive !== numberFive);
 
-// object equality by reference
+//* object equality by reference
 const ellie1 = { name: 'ellie' };
 const ellie2 = { name: 'ellie' };
 const ellie3 = ellie1;
@@ -93,7 +93,7 @@ console.log(ellie1.name == ellie2.name); // true
 console.log(ellie1 === ellie2); // false
 console.log(ellie1 === ellie3); // true
 
-// equality - puzzler
+//* equality - puzzler
 console.log(0 == false); // true
 console.log(0 === false); // false
 console.log('' == false); // true
@@ -102,7 +102,7 @@ console.log(null == undefined); // true
 console.log(null === undefined); // false
 
 //? 8. Conditional operators: if
-// if, else if, else
+//* if, else if, else
 const name = 'df';
 if (name === 'ellie') {
 	console.log('Welcome, Ellie!');
@@ -113,13 +113,13 @@ if (name === 'ellie') {
 }
 
 //? 9. Ternary operator: ?
-// condition ? value1 : value2;
+//* condition ? value1 : value2;
 console.log(name === 'ellie' ? 'yes' : 'no');
 
 //? 10. Switch statement
-// use for multiple if checks
-// use for enum-like value check
-// use for multiple type checks in TS
+//* use for multiple if checks
+//* use for enum-like value check
+//* use for multiple type checks in TS
 const browser = 'IE';
 switch (browser) {
 	case 'IE':
@@ -135,8 +135,8 @@ switch (browser) {
 }
 
 //? 11. Loops
-// while loop, while the condition is truthy,
-// body code is executed.
+//* while loop, while the condition is truthy,
+//* body code is executed.
 let i = 3;
 while (i > 0) {
 	console.log(`while: ${i}`);
@@ -167,8 +167,8 @@ for (let i = 0; i < 10; i++) {
 	}
 }
 
-// break, continue
-// Q1. iterate from 0 to 10 and print only even numbers (use continue)
+//? break, continue
+//? Q1. iterate from 0 to 10 and print only even numbers (use continue)
 for (let i = 0; i < 11; i++) {
 	if (i % 2 === 0) {
 		continue;
@@ -176,7 +176,7 @@ for (let i = 0; i < 11; i++) {
 	console.log(`q1. ${i}`);
 }
 
-// Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
+//? Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
 for (let i = 0; i < 11; i++) {
 	if (i > 8) {
 		break;

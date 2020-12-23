@@ -1,2 +1,0 @@
-- [nodeJS](https://nodejs.org/docs/latest-v13.x/api/console.html)
-- [MDN web docs](https://developer.mozilla.org/ko/)
