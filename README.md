@@ -82,7 +82,7 @@
 
 - web assembly : 브라우저에서 동작가능한 유일한 언어 javascript의 대체재. 네이티브에 가까운 저수준 어셈블리 언어. C/C++, Rust 등과 같은 언어의 컴파일 타겟. JavaScript와 함께 실행되며 서로를 보완할 수 있도록 설계.
 
-### tutorial 순서
+## tutorial 순서
 
 - 1. helloWorld
 - 2. variables
@@ -257,3 +257,7 @@ example.fn();
   - image
   - track mouse movement
   - set transform origin on hover
+
+## [드림코딩 by 엘리 JS 강의 ](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
+
+## [드림코딩 by 엘리 JS 강의 정리](https://www.notion.so/07dfed016e914c3a8612fc76dd1542f0?v=c6feaeb5b46e4fdeb1e756113cb529c1)
