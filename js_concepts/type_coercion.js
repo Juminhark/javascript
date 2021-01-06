@@ -22,3 +22,5 @@ console.log(24 - '1'); // 23
 console.log('' == 0); // true
 
 //? === 에서는 type coercion이 일어나지 않는다.
+
+//! === 을 써라!
