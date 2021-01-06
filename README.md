@@ -261,3 +261,7 @@ example.fn();
 ## [드림코딩 by 엘리 JS 강의 ](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
 
 ## [드림코딩 by 엘리 JS 강의 정리](https://www.notion.so/07dfed016e914c3a8612fc76dd1542f0?v=c6feaeb5b46e4fdeb1e756113cb529c1)
+
+## [33 Concepts Every JavaScript Developer Should Know](https://github.com/leonardomso/33-js-concepts)
+
+## [노마드 코더(Nomad Coders) - 33 Concept of JavaScript](https://www.youtube.com/playlist?list=PL7jH19IHhOLMmmjrwCi7-dMFVdoU0hhgF)

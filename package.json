@@ -1,7 +1,7 @@
 {
 	"name": "javascript",
 	"version": "1.0.0",
-	"description": "- [모던 JavaScript 튜토리얼](https://ko.javascript.info/hello-world)",
+	"description": "collection",
 	"main": "index.js",
 	"dependencies": {
 		"nodemon": "^2.0.6"
