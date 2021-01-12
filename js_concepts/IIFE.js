@@ -1,4 +1,4 @@
-//? IIFE(Immediately-Invoked Function Expressions)
+//? 8. IIFE(Immediately-Invoked Function Expressions)
 
 const openUsers = ['Nicolas', 'Lynn', 'Steven', 'Autumn'];
 console.log(openUsers);

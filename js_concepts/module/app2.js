@@ -1,4 +1,4 @@
-//? Module
+//? 8. Module import
 //? https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 import { addUser, getUsers } from './app.js';
 
