@@ -1,9 +1,9 @@
 # Javascript
 
+- [MDN web docs](https://developer.mozilla.org/ko/)
 - [코어 자바스크립트](https://ko.javascript.info/js)
 - [드림코딩 by 엘리 - 자바스크립트 기초 강의](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
-- [nodeJS](https://nodejs.org/docs/latest-v13.x/api/console.html)
-- [MDN web docs](https://developer.mozilla.org/ko/)
+- [js_server-nodeJS](https://nodejs.org/docs/latest-v13.x/api/console.html)
 
 ## web 역사
 
@@ -74,7 +74,8 @@
 
 ## 이용 분야
 
-- back-end : node.js => deno 작년. javascript => web => server (ES => server 표준화 => CommonJS)
+- back-end : node.js => deno 작년.
+- javascript => web => server (ES => server 표준화 => CommonJS)
 - mobile : react-native
 - desktop application : electron
 
@@ -415,3 +416,7 @@ function canDrinkResponse(age) {
 
 canDrinkBest(p);
 ```
+
+<https://www.youtube.com/watch?v=3PHXvlpOkf4>
+<https://github.com/john-smilga/javascript-basic-projects/blob/master/3-reviews/final/app.js>
+<https://www.youtube.com/watch?v=kBMnD_aElCQ>

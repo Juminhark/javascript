@@ -1,6 +1,6 @@
 const slide = document.querySelector('.hike');
 
-// scroll triger #1
+// scroll trigger #1
 
 // window.addEventListener('scroll', scrollReveal);
 
@@ -12,20 +12,20 @@ const slide = document.querySelector('.hike');
 //   }
 // }
 
-// scroll triger #2
+// scroll trigger #2
 
 let options = {
-  threshold: 0.5,
+	threshold: 0.5,
 };
 
 let observer = new IntersectionObserver(slideAnim, options);
 
 function slideAnim(entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      slide.style.background = 'white';
-    }
-  });
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			slide.style.background = 'white';
+		}
+	});
 }
 
 observer.observe(slide);
