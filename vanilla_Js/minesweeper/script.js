@@ -1,6 +1,6 @@
 // Display / UI
 
-import { createBoard } from './mineseeper';
+import { createBoard } from './minesweeper';
 
 console.log(createBoard(2, 2));
 
