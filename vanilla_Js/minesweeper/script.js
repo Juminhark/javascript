@@ -1,8 +1,14 @@
 // Display / UI
 
-import { createBoard } from './minesweeper';
+import { createBoard } from './minesweeper.js';
 
-console.log(createBoard(2, 2));
+const board = createBoard(2, 2);
+const boardElement = document.querySelector('.board');
+board.forEach((row) => {
+	row.forEach((tile) => {
+		boardElement.append(tile.element);
+	});
+});
 
 // 1. Populate a board with tiles/mines
 
