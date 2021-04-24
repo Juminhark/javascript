@@ -416,5 +416,3 @@ function canDrinkResponse(age) {
 
 canDrinkBest(p);
 ```
-
-- https://www.youtube.com/watch?v=kBMnD_aElCQ
