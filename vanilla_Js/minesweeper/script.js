@@ -3,10 +3,14 @@
 import { createBoard } from './minesweeper.js';
 
 const BOARD_SIZE = 10;
-const NUMBER_OF_MINES = 2;
+const NUMBER_OF_MINES = 9;
 
 const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES);
 const boardElement = document.querySelector('.board');
+const minesLeftText = document.querySelector('[data-mine-count]');
+
+console.log(board);
+
 board.forEach((row) => {
 	row.forEach((tile) => {
 		boardElement.append(tile.element);
@@ -14,6 +18,7 @@ board.forEach((row) => {
 });
 
 boardElement.style.setProperty('--size', BOARD_SIZE);
+minesLeftText.textContent = NUMBER_OF_MINES;
 
 // 1. Populate a board with tiles/mines
 

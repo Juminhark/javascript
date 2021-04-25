@@ -11,6 +11,7 @@ export function createBoard(boardSize, numberOfMines) {
 	const board = [];
 
 	const minePositions = getMinePositions(boardSize, numberOfMines);
+
 	console.log(minePositions);
 
 	for (let x = 0; x < boardSize; x++) {
@@ -22,7 +23,7 @@ export function createBoard(boardSize, numberOfMines) {
 				element,
 				x,
 				y,
-				mine: true,
+				mine: minePositions.some(positionMatch.bind(null, { x, y })),
 				get status() {
 					return this.element.dataset.status;
 				},
