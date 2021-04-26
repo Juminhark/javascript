@@ -425,3 +425,76 @@ positionMatch.bind(null, position))
 // .bind() 의 첫번째 인자에 값을 대입하며 진행
 
 ```
+
+## don`t write long functions : 가독성의 문제
+
+```js
+const axios = require("axios")
+
+const apiInstance = axios.create({
+  baseURL: 'https://locallhost:5000'
+  headers: {"api-key": process.env.SEND_IN_BLUE_API_KEY}
+})
+
+//! 👎 : #region Original
+async function linkContactAndItem(email, {listId}) {
+  // 1. Get Contact
+  // 2.1. if contact exists then update
+  // 2.2 I no contact then create
+  const contact = await apiInstance
+    .get(`contacts/${emailOrId}`)
+    .then(res => res.data)
+    .catch(e => {
+      if(e.response.status === 404) return null
+      throw e
+    })
+
+    if(contact == null) {
+      return apiInstance.post("contacts", {
+        email,
+        listIds : [listId],
+      })
+    } else {
+      return apiInstance.put(`contacts/${emailOrId}`, {
+        listIds: [newListId],
+      })
+    }
+}
+// #endregion
+
+
+//? 👍👍 #region small functions
+async function linkContactAndItem(email, {listId}) {
+  const contact = await getContact(email)
+
+  if(contact == null) {
+    return createContact(email, listId)
+  }
+  return updateContact(contact.id, listId)
+}
+
+
+function createContact(email, listId) {
+  return apiInstance.post("contacts", {
+    email,
+    listIds : [listId],
+  })
+}
+
+function updateContact(emailOrId, newListId) {
+  return apiInstance.put(`contacts/${emailOrId}`, {
+    listIds: [newListId],
+  })
+}
+
+function getContact(emailOrId) {
+  return apiInstance
+    .get(`contacts/${emailOrId}`)
+    .then(res => res.data)
+    .catch(e => {
+      if(e.response.status === 404) return null
+      throw e
+    })
+}
+// #endregion
+```
