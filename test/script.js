@@ -1,7 +1,11 @@
-const test_container = document.querySelector('.test-container');
+const people = [
+	{ name: 'bob', age: 20, position: 'developer' },
+	{ name: 'anna', age: 25, position: 'designer' },
+	{ name: 'peter', age: 30, position: 'the boss' },
+	{ name: 'john', age: 26, position: 'intern' },
+];
 
-const addText = document.createElement('div');
+const names = people.map((person) => `<h2>${person.name}</h2>`);
+const result = document.querySelector('#result');
 
-addText.innerText = 'Hello World!';
-
-test_container.appendChild(addText);
+result.innerHTML = names.join('');
