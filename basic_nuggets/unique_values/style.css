@@ -1,0 +1,9 @@
+body {
+	text-align: center;
+	padding-top: 10rem;
+}
+button {
+	display: inline-block;
+	margin: 1rem 0.5rem;
+	padding: 0.25rem 0.5rem;
+}
