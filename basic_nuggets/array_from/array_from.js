@@ -17,7 +17,17 @@ const items = Array.from({ length: 120 }, (_, index) => {
 	return index;
 });
 
-const itemsPerPage = 10;
-const pages = items.length / itemsPerPage;
+//? Pagination 에서 유용하게 사용
+// 1page에 14개를 노출하게 된다면, pages만큼의 page가 필요
 
-console.log(pages);
+const itemsPerPage = 14;
+const pages = Math.ceil(items.length / itemsPerPage);
+
+const newItems = Array.from({ length: pages }, (_, index) => {
+	const start = index * itemsPerPage;
+	const tempItems = items.slice(start, start + itemsPerPage);
+
+	return tempItems;
+});
+
+console.log(newItems);
