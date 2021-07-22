@@ -20,4 +20,11 @@ handleName('susan', function (value) {
 
 handleName('sw', (value) => console.log(value));
 
+//? class = btn : .btn
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', () => {
+	console.log('click');
+});
+
 // array methods, setTimeout, event listeners etc
