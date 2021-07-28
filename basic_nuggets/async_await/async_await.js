@@ -1,13 +1,21 @@
 //? Async Await
 //? async must be present, always returns a promise
-//? await waits till promise is settled
+//? await waits till promise is settled(안정된)
 //? error handling - try / catch block
 
-const example = async () => {
-	return 'hello there';
-};
+// const example = async () => {
+// 	return 'hello there';
+// };
 
-console.log(example());
+// console.log(example()); // Promise {<fulfilled>: "hello there"}
+
+// async function someFunc() {
+// 	const result = await example();
+// 	console.log(result);
+// 	console.log('hello world');
+// }
+
+// someFunc(); // hello there
 
 const users = [
 	{ id: 1, name: 'john' },
@@ -21,20 +29,24 @@ const articles = [
 	{ userId: 3, articles: ['six', 'seven', 'eight', 'nine'] },
 ];
 
-const getData = async () => {
+//? 요 아래꺼가 최근 많이 사용하는 문법
+
+const getData = async (name) => {
 	try {
-		const user = await getUser('john');
+		const user = await getUser(name);
 		const articles = await getArticles(user.id);
 		console.log(articles);
 	} catch (error) {
 		console.log(error);
 	}
 };
-// getData();
+getData('susan');
+
+// 위랑 같지만 old
 // getUser('susan')
-//   .then((user) => getArticles(user.id))
-//   .then((articles) => console.log(articles))
-//   .catch((err) => console.log(err))
+// 	.then((user) => getArticles(user.id))
+// 	.then((articles) => console.log(articles))
+// 	.catch((err) => console.log(err));
 
 function getUser(name) {
 	return new Promise((resolve, reject) => {
