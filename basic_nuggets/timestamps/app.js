@@ -36,4 +36,26 @@ const futureDate = new Date(now + 1000 * 6);
 console.log(futureDate);
 console.log(new Date());
 
+// 사용하는곳 예.
+// cookie의 기한 : expires
+// const oneDay = 1000 * 60 * 60 * 24;
+// expires: new Date(date.now() + oneDay)
+
 //? difference between dates
+const firstDate = new Date();
+const secondDate = new Date(2021, 10, 27);
+
+const firstValue = firstDate.getTime();
+const secondValue = secondDate.getTime();
+
+console.log(firstValue);
+console.log(secondValue);
+
+const timeDifference = secondValue - firstValue;
+
+console.log(timeDifference);
+const minutes = timeDifference / (1000 * 60);
+console.log(minutes);
+
+const hours = timeDifference / (1000 * 60 * 60);
+console.log(hours);
