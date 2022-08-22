@@ -71,6 +71,40 @@ console.log(a, b); // 20 10
 
 ## Default Parameter
 
+- 함수에 전달된 Arguments가 undefined 이거나 값이 없을 때, 초기화 설정된 Parameter
+
+```js
+function logName(name = 'ju') {
+  console.log(name);
+}
+
+logName(); // ju
+logName('kim'); // kim
+
+function logNumber(num = 1991) {
+  console.log(num);
+}
+
+logNumber(); // 1991
+logNumber(2010); // 2010
+logNumber(0); // 0
+
+function getString() {
+  console.log('getting string');
+  return 'empty string';
+}
+
+function logString(str = getString()) {
+  console.log(str);
+}
+
+logString(); // getting string empty string
+logString(undefined); // getting string empty string
+logString(null); // null
+logString(false); // false
+logString('hello world'); // hello world
+```
+
 ## Rest Parameter
 
 ## Spread Operator
