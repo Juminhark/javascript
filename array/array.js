@@ -1,9 +1,9 @@
-var myArray1 = new Array('hello', 'world');
+let myArray1 = new Array('hello', 'world');
 //Literal declaration, the preferred way.
-var myArray2 = ['hello', 'world'];
+let myArray2 = ['hello', 'world'];
 
 //Creating empty arrays and adding values
-var myArray = [];
+let myArray = [];
 //Adds "hello" on index 0
 myArray.push('hello');
 //Adds "world" on index 1
@@ -14,29 +14,29 @@ myArray[2] = '!';
 console.log(myArray);
 
 //Leaving indices
-var myArray = [];
+let myArray = [];
 myArray[0] = 'hello';
 myArray[1] = 'world';
 myArray[3] = '!';
 console.log(myArray); // [ "hello", "world", undifined, "!" ];
 
 //Accessing array items by index
-var myArray = ['hello', 'world', '!'];
+let myArray = ['hello', 'world', '!'];
 console.log(myArray[2]); //"!"
 
 //[Array Methods and Properties]
 //Length of an array
-var myArray = ['hello', 'world', '!'];
+let myArray = ['hello', 'world', '!'];
 console.log(myArray.length); //3
 
-var myArray = ['hello', 'world', '!'];
-for (var i = 0; i < myArray.length; i++) {
+let myArray = ['hello', 'world', '!'];
+for (let i = 0; i < myArray.length; i++) {
   console.log(myArray[i]);
 }
 
-var myArray = [2, 3, 4];
-var myOtherArray = [4, 5, 6, 7];
-var wholeArray = myArray.concat(myOtherArray); // [2, 3, 4, 5, 6, 7]
+let myArray = [2, 3, 4];
+let myOtherArray = [4, 5, 6, 7];
+let wholeArray = myArray.concat(myOtherArray); // [2, 3, 4, 5, 6, 7]
 console.log(wholeArray);
 console.log(wholeArray.length); //7
 
@@ -48,7 +48,7 @@ console.log(wholeArray.length); //7
 요즘에는 제이슨방법   property로 ,로 구분해서 보낸다*/
 
 //Joining elements
-var myArray = ['hello', 'world', '!'];
+let myArray = ['hello', 'world', '!'];
 // The default separator is a comma.
 console.log(myArray.join()); //"hello, world, !"
 console.log(myArray.join().length); //13
@@ -56,25 +56,25 @@ console.log(myArray.join().length); //13
 console.log(myArray.join(' ')); //"hello world !";
 console.log(myArray.join('!!')); //"hello!!world!!!";
 // ...including an empty one.
-var arr = myArray.join('');
+let arr = myArray.join('');
 console.log(arr); // "helloworld!"
 console.log(arr.length); //11
 
 //Pushing and popping
-var myArray = [];
+let myArray = [];
 myArray.push(0); //[ 0 ]
 myArray.push(2); //[ 0, 2 ]
 myArray.push(7); //[ 0, 2, 7]
 myArray.pop; //[ 0, 2 ]
 console.log(myArray);
 
-var myArray = ['world', 'hello'];
+let myArray = ['world', 'hello'];
 myArray.reverse(); //[ "hello", "world" ]
 console.log(myArray);
 /* 배열 순서 거꾸로 */
 
 //Queue with shift() and push()
-var myArray = [];
+let myArray = [];
 myArray.push(0); //[ 0 ]
 myArray.push(2); //[ 0, 2 ]
 myArray.push(7); //[ 0, 2, 7]
@@ -82,29 +82,29 @@ myArray.shift; //[ 2, 7 ]
 console.log(myArray);
 /* index가 바뀐다 */
 
-var myArray = [];
+let myArray = [];
 myArray.unshift(0); //[ 0 ]
 myArray.unshift(2); //[ 2, 0 ]
 myArray.unshift(7); //[ 7, 2, 0 ]
 console.log(myArray);
 
 //Slicing
-var myArray = [1, 2, 3, 4, 5, 6, 7, 8];
-var newArray = myArray.slice(3);
+let myArray = [1, 2, 3, 4, 5, 6, 7, 8];
+let newArray = myArray.slice(3);
 console.log(myArray); //[ 1, 2, 3, 4, 5, 6, 7, 8 ]
 console.log(newArray); //[ 4, 5, 6, 7, 8 ];
 // index 번호부터 잘라서 새로운 배열을 만들어낸다
 // 기존의 배열은 없어지지 않는다.
 
 //myArray.splice (index, length, values, ...);
-var myArray = [0, 7, 8, 5];
+let myArray = [0, 7, 8, 5];
 // index 1 부터 length 2 를 value [1,2,3,4]로 치환
 myArray.splice(1, 2, 1, 2, 3, 4);
 console.log(myArray); // [ 0, 1, 2, 3, 4, 5 ]
 
 // Sorting without comparing function.
 // 배열 정렬
-var myArray = [3, 2, 1];
+let myArray = [3, 2, 1];
 myArray.sort(); //1, 2 ,3
 console.log(myArray);
 
@@ -112,7 +112,7 @@ console.log(myArray);
 function descending(a, b) {
   return b - a;
 }
-var myArray = [1, 2, 3];
+let myArray = [1, 2, 3];
 myArray.sort(descending); // [ 3, 2, 1 ]
 console.log(myArray);
 
