@@ -2,13 +2,9 @@ let myArray1 = new Array('hello', 'world');
 //Literal declaration, the preferred way.
 let myArray2 = ['hello', 'world'];
 
-//Creating empty arrays and adding values
 let myArray = [];
-//Adds "hello" on index 0
 myArray.push('hello');
-//Adds "world" on index 1
 myArray.push('world');
-//Adds "!" on index 2
 myArray[2] = '!';
 
 console.log(myArray);

@@ -1,5 +1,22 @@
 # Javascript
 
+## 표준내장객체
+
+- 기초객체
+- - Obejct
+- - Function
+- 숫자 및 날짜
+- - Number
+- - Math
+- - Date
+- 텍스트처리
+- - String
+- - RegExp
+- index collection
+- - Array
+- key collection
+- - Set
+
 ## web 역사
 
 - 1993 : Mosaic Web Browser
@@ -77,16 +94,6 @@
 ## 뜨고 있는 기술
 
 - web assembly : 브라우저에서 동작가능한 유일한 언어 javascript의 대체재. 네이티브에 가까운 저수준 어셈블리 언어. C/C++, Rust 등과 같은 언어의 컴파일 타겟. JavaScript와 함께 실행되며 서로를 보완할 수 있도록 설계.
-
-## tutorial 순서
-
-- 1. helloWorld
-- 2. variables
-- 3. concatenation
-- 4. dataTypes
-- 5. prompt, confirm
-- 6. conversion
-- 7. operators
 
 ## require vs import (CommonJs와 ES6)
 
@@ -199,7 +206,7 @@ function doUserCoinMinus(user) {
 - Why I Don't Use Else When Programming
 
 ```js
-//? [Guard Clauses](https://blog.fakecoding.com/archives/guard-clause/)
+//? Guard Clauses
 
 //! 👎 : Single return  is bad
 function canDrink(person) {
@@ -358,11 +365,16 @@ function getContact(emailOrId) {
 
 # Reference
 
-- [JavaScript 안내서](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide)
-- [코어 자바스크립트](https://ko.javascript.info/js)
-- [드림코딩 by 엘리 - 자바스크립트 기초 강의](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
-- [js_server-nodeJS](https://nodejs.org/docs/latest-v13.x/api/console.html)
+- [JavaScript 안내서 - MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide)
 
-- [드림코딩 by 엘리 JS 강의](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=1)
+- [모던 JavaScript 튜토리](https://ko.javascript.info/)
 
-- [드림코딩 by 엘리 JS 강의 정리](https://www.notion.so/07dfed016e914c3a8612fc76dd1542f0?v=c6feaeb5b46e4fdeb1e756113cb529c1)
+- [신입에게 추천하는 프론트엔드 가이드 - OKKY](https://okky.kr/articles/1303947)
+
+- [Array 배열 기초개념 - 노마드코더](https://www.youtube.com/watch?v=NFETSCJON2M)
+
+- [Javascript Nuggets - Coding Addict](https://youtube.com/playlist?list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ)
+
+- [자바스크립트 기초강의 - 드림코딩](https://youtube.com/playlist?list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2)
+
+- [클린코드를 위한 Guard Clause - swhan9404](https://velog.io/@swhan9404/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9C%84%ED%95%9C-Guard-Clause)

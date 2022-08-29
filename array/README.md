@@ -1,6 +1,10 @@
-## Array.slice()
+## [Array.from()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
 
-- 배열안에 다른 배열이 존재하면 얕은 복사가 되지만 다른배열이 없을경우 깊은 복사가 된다
+## [Array.slice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+- 배열안에 원시형값만 있으면 깊은 복사, 참조형이 있으며 얕은복사
+
+## [Array.splice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 ## Array.sort()
 
