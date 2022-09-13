@@ -357,6 +357,190 @@ function getContact(emailOrId) {
 // #endregion
 ```
 
+### Object 와 Array
+
+- Object : 객체
+
+```ts
+let zero = {
+  // key : value
+  name: { firstName: 'Zero', lastName: 'Cho' },
+  // value : any,  () => 일 경우 method
+  nameChange: (b) => {
+    zero.name.lastName = b;
+  },
+  deleteLastName: () => {
+    delete zero.name.lastName;
+  },
+};
+
+let zeroOne = new zero();
+
+console.log(zero.name);
+zero.nameChange('onepiece');
+console.log(zero.name);
+zero.deleteLastName();
+console.log(zero.name);
+```
+
+- Array : 배열
+
+```ts
+Array 생성자
+new Array(2)
+Array(k).fill(0); : 0으로 채워 넣은 배열
+
+k x k 2중 배열
+Array.from(Array(k), () => Array(k).fill(0));
+
+let zero = ['Zero', 'Cho'];
+
+console.log(zero[0]);
+let zero = [
+	['firstName', 'Zero'],
+	['lastName', 'Cho'],
+];
+
+console.log(zero[1][1]);
+```
+
+### function
+
+- eval() : function
+
+```sh
+console.log(eval('2 + 2'));             // 4
+console.log(eval(new String('2 + 2'))); // [String: '2 + 2']
+
+// primitive type 의 string만 변환
+// object type은 안된다.
+
+```
+
+- padStart() : function
+
+```sh
+str.padStart(targetLength, [padString])
+
+targetLength : 목표 문자열 길이.
+padString[Optional] : 현재 문자열에 채워넣을 다른 문자열. 기본값은 " "
+
+console.log('ab'.padStart(5))   // "   ab"
+console.log('ab'.padStart(5, "#"))   // "###ab"
+```
+
+- !isNaN(string) : 주어진 값이 NaN 인지 판별
+
+```sh
+console.log(!isNaN('1')); // true
+console.log(!isNaN('9')); // true
+console.log(!isNaN('s')); // false
+console.log(!isNaN('#')); // false
+
+//* NaN : Not a Number
+// 1. 숫자로서 읽을 수 없음 (parseInt("어쩌구"), Number(undefined))
+// 2. 결과가 허수인 수학 계산식 (Math.sqrt(-1))
+// 3. 피연산자가 NaN (7 ** NaN)
+// 4. 정의할 수 없는 계산식 (0 * Infinity)
+// 5. 문자열을 포함하면서 덧셈이 아닌 계산식 ("가" / 3)
+```
+
+### String.function()
+
+- [String.split()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split) : 문자열 나누기
+
+### 비트 연산자
+
+```sh
+// 비트 AND
+// 피연산자를 비트로 바꿨을 때 각각 대응하는 비트가 모두 1이면 그 비트값에 1을 반환.
+a & b
+
+// 비트 OR
+// 피연산자를 비트로 바꿨을 때 각각 대응하는 비트가 모두 1이거나 한 쪽이 1이면 1을 반환.
+a | b
+
+// 비트 XOR
+// 피연산자를 비트로 바꿨을 때 대응하는 비트가 서로 다르면 1을 반환.
+a ^ b
+
+// 비트 NOT
+// 피연산자의 반전된 값을 반환.
+~ a
+
+const a = 9;
+const b = 30;
+
+console.log(a.toString(2));					// 00001
+console.log(b.toString(2)); 				// 11110
+console.log((a | b).toString(2));  	// 11111
+```
+
+### 정규 표현식
+
+```ts
+// 생성자
+let re = /ab+c/;
+re = new RegExp('ab+c');
+
+// ^ : 입력의 시작부분을 대응
+re = /^A/;
+
+let t = 'An E';
+re.test(t); // true : A 와 대응
+t = 'an A';
+re.test(t); // false
+
+// $ : 입력의 끝부분과 대응
+re = /t$/;
+
+t = 'eater';
+re.test(t); // false
+t = 'eat';
+re.test(t); // true : t와 대응
+
+//  * : 앞의 표현식의 0번 이상 반복되는 부분과 대응
+re = /bo*/;
+
+t = 'A ghost booooed';
+re.test(t); // true : boooo 와 대응
+t = 'A bird warbled';
+re.test(t); // true : b 와 대응
+t = 'A goat grunted';
+re.test(t); // false
+
+// + : 앞의 표현식의 1번 이상 반복되는 부분과 대응
+re = /a+/;
+
+t = 'candy';
+re.test(t); // true : a 와 대응
+t = 'caaaaaaandy';
+re.test(t); // true : 모든 a 와 대응
+t = 'cndy';
+re.test(t); // false
+```
+
+## javascript 자료형
+
+- 동적 타이핑 : 변수 타입을 미리 선언하지않아도된다.
+
+```ts
+let foo = 42; // foo는 Number형
+foo = 'bar'; // foo는 String형
+foo = true; // foo는 Boolean형
+```
+
+- data type
+  - 최신 ECMAScript 표준 : 7가지 자료형
+    - Primitive : 기본자료형
+      - Boolean
+      - Null
+      - Undefined
+      - Number
+      - String
+      - Symbol (ES6에 추가)
+    - Object
+
 ## [function.bind()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 ## [Optional chaining](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
