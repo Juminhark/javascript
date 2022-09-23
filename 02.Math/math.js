@@ -1,3 +1,13 @@
+//? Math.ceil() : 올림
+console.log(Math.ceil(7.04)); // 8
+
+//? Math.floor() : 내림
+console.log(Math.floor(7.04)); // 7
+
+//? Math.round() : 반올림
+console.log(Math.round(7.04)); // 7
+console.log(Math.round(7.54)); // 8
+
 //? Math.abs() : 절대값 :
 console.log(Math.abs(-2)); // 2
 
@@ -12,10 +22,3 @@ console.log(Math.hypot(3, 4)); // 5
 console.log(Math.hypot(2, 2)); // 2.8284271247461903
 console.log(2 * Math.sqrt(2)); // 2.8284271247461903
 console.log(2 * Math.SQRT2); // 2.8284271247461903
-
-//? Math.ceil() : 올림
-console.log(Math.ceil(7.04)); // 8
-
-//? Math.floor() : 내림
-
-//? Math.round() : 반올림

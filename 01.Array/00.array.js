@@ -1,12 +1,12 @@
+//? 생성방법
 let myArray1 = new Array('hello', 'world');
-//Literal declaration, the preferred way.
 let myArray2 = ['hello', 'world'];
 
+//? data 삽입방법
 let myArray = [];
 myArray.push('hello');
 myArray.push('world');
 myArray[2] = '!';
-
 console.log(myArray);
 
 //Leaving indices
