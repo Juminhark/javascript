@@ -71,3 +71,7 @@ console.log(arr.reduce((pre, cur) => pre + cur));
 //? forEach : 주어진 함수를 요소 각각에 실행
 arr.forEach((a) => console.log(a));
 ```
+
+## Reference
+
+- [8 Must Know JavaScript Array Methods - Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)

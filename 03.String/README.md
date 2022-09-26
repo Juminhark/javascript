@@ -3,3 +3,5 @@
 - String.split()
 - String.replace()
 - String.substring()
+- String.toLowerCase()
+- String.toUpperCase()
