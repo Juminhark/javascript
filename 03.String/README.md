@@ -5,6 +5,7 @@
 - String.substring()
 - String.toLowerCase()
 - String.toUpperCase()
+- String.match()
 
 ## String is iterable
 
