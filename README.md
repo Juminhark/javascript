@@ -541,6 +541,13 @@ foo = true; // foo는 Boolean형
       - Symbol (ES6에 추가)
     - Object
 
+## 
+
+```js
+let [c1, c2] = [1,2]
+console.log(c1,c2) // 1 2
+```
+
 ## [function.bind()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 ## [Optional chaining](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
