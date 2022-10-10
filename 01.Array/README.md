@@ -72,6 +72,11 @@ console.log(arr.reduce((pre, cur) => pre + cur));
 arr.forEach((a) => console.log(a));
 ```
 
+## 깊은 복사 vs 얕은 복사
+
+- 원시값은 기본적으로 깊은 복사
+- 참조값만 얕은 복사가 가능
+
 ## Reference
 
 - [8 Must Know JavaScript Array Methods - Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)

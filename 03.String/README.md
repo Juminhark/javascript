@@ -22,3 +22,6 @@ for (let i of test) {
 // A S D
 // 123 => ERROR
 ```
+
+
+## 특정문제 제거
