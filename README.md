@@ -445,9 +445,6 @@ console.log(!isNaN('#')); // false
 // 5. 문자열을 포함하면서 덧셈이 아닌 계산식 ("가" / 3)
 ```
 
-### String.function()
-
-- [String.split()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split) : 문자열 나누기
 
 ### 비트 연산자
 

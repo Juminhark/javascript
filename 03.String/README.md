@@ -6,6 +6,7 @@
 - String.toLowerCase()
 - String.toUpperCase()
 - String.match()
+- String.repeat()
 
 ## String is iterable
 
@@ -21,6 +22,23 @@ for (let i of test) {
 
 // A S D
 // 123 => ERROR
+
+// str 
+let my_string = 'abcdefg'
+
+for(let i of my_string){
+    console.log(i)
+}
+
+// a
+// b
+// c
+// d
+// e
+// f
+// g
+
+
 ```
 
 

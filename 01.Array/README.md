@@ -77,6 +77,8 @@ arr.forEach((a) => console.log(a));
 - 원시값은 기본적으로 깊은 복사
 - 참조값만 얕은 복사가 가능
 
+## 두 배열 비교
+
 ## Reference
 
 - [8 Must Know JavaScript Array Methods - Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)
