@@ -1,7 +1,30 @@
-# ES6
+# New Features in ES6
 
-- ES 2015
-- ECMAScript 2015
+- The let keyword
+- The const keyword
+- Arrow Functions
+- The ... Operator
+- For/of
+- Map Objects
+- Set Objects
+- Classes
+- Promises
+- Symbol
+- Default Parameters
+- Function Rest Parameter
+- String.includes()
+- String.startsWith()
+- String.endsWith()
+- Array.from()
+- Array keys()
+- Array find()
+- Array findIndex()
+- New Math Methods
+- New Number Properties
+- New Number Methods
+- New Global Methods
+- Object entries
+- JavaScript Modules
 
 ## let
 
@@ -143,4 +166,5 @@ console.log(`My name is ${name}`); // My name is Taesu Hyeon
 
 # Reference
 
+- [w3schools - es6](https://www.w3schools.com/js/js_es6.asp)
 - [JavaScript - ECMA 2015 (ES6)에 대해 알아보자](https://velog.io/@surim014/2020-01-02-1901-%EC%9E%91%EC%84%B1%EB%90%A8)
