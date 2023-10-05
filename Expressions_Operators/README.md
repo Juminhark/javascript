@@ -1,31 +1,92 @@
 # Expressions and operators (표현식과 연산자)
 
--
+## Expression(표현식)
 
-## 연산자
+- Expression(표현식)은 리터럴, 식별자, 연산자, 함수 호출 등의 조합
 
-| name                            | shorthand operator | meaning          |
-| ------------------------------- | ------------------ | ---------------- |
-| Assignment                      | x = f()            | x = f()          |
-| Addition assignment             | x += f()           | x = x + f()      |
-| Subtraction assignment          | x -= f()           | x = x - f()      |
-| Multiplication assignment       | x \*= f()          | x = x \* f()     |
-| Division assignment             | x /= f()           | x = x / f()      |
-| Remainder assignment            | x %= f()           | x = x % f()      |
-| Exponentiation assignment       | x \*\*= f()        | x = x \*\* f()   |
-| Left shift assignment           | x <<= f()          | x = x << f()     |
-| Right shift assignment          | x >>= f()          | x = x >> f()     |
-| Unsigned right shift assignment | x >>>= f()         | x = x >>> f()    |
-| Bitwise AND assignment          | x &= f()           | x = x & f()      |
-| Bitwise XOR assignment          | x ^= f()           | x = x ^ f()      |
-| Bitwise OR assignment           | x \|= f()          | x = x \| f()     |
-| Logical AND assignment          | x &&= f()          | x && (x = f())   |
-| Logical OR assignment           | x \|\|= f()        | x \|\| (x = f()) |
-| Nullish coalescing assignment   | x ??= f()          | x ?? (x = f())   |
+```js
+// 리터럴 표현식
+10;
+
+// 식별자 표현식
+// * 식별자 : 코드 내의 변수, 함수, 혹은 속성을 식별하는 문자열
+sum;
+
+// 연산자 표현식
+10 + 20;
+
+// 함수/메소드 호출 표현식
+square();
+```
+
+- 표현식은 평가되어 하나의 '값'이 되므로 표현식과 값은 동치(Equivalent)이다. 따라서 표현식은 값처럼 사용할수 있다
+
+```js
+let x = 10;
+
+// 연산자 표현식
+x + 10; // 식별자 표현식과 숫자 리터럴과 연산자의 조합
+```
+
+### 문(statement)과 표현식
+
+- Statement(문)은 자바스크립트 엔진에게 내리는 명령이다.
+
+```js
+// 변수 선언문
+var x;
+
+// 할당문
+x = 5;
+
+// 함수 선언문
+function foo () {}
+
+// 조건문
+if (x > 5) { … }
+
+// 반복문
+for (var i = 0; i < 10; i++) { … }
+```
+
+- 자바스크립트의 모든 코드는 문 또는 표현식이다
+- 표현식은 평가되어 값을 만들지만 그 이상의 행위는 할 수 없다.
+- 문은 var, let, const, function, class와 같은 선언 키워드를 사용하여 변수나 함수를 생성하기도 하고 if, for, while 문과 같은 제어문을 생성하여 프로그램의 흐름을 제어하기도 한다
+
+```js
+// 선언문(Declaration statement)
+var x = 5 * 10; // 표현식 x = 5 * 10를 포함하는 문이다.
+
+// 할당문(Assignment statement)
+x = 100; // 이 자체가 표현식이지만 완전한 문이기도 하다.
+```
+
+- 위에서의 선언문은 표현식이 아닌 문이기 떄문에 값처럼 사용할수 없다
+- 크롬 DevTools에서 표현식이 아닌 문은 언제나 undefined를 반환하고, 표현식인 문은 언제나 값을 반환한다.
+
+## Operator(연산자)
+
+- 연산자(Operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입 연산 등을 수행해 하나의 값을 만든다.
+- 피연산자(Operand)도 평가되어 하나의 값이 되므로 표현식이고 피연산자를 연산자와 결합한 연산자 표현식도 물론 표현식이다.
+
+- 할당 연산자
+- 비교 연산자
+- 산술 연산자
+- 비트 연산자
+- 논리 연산자
+- 문자열 연산자
+- 조건 (삼항) 연산자
+- 쉼표 연산자
+- 단항 연산자
+- 관계 연산자
 
 ## Regular Expression(정규 표현식)
 
-## Exponentiation(\*\*) : 지수화
+## etc
+
+- 문의 끝에는 반드시 ;(세미콜런)을 붙여야 하는가?
+- - 자바스크립트 엔진이 스크립트를 해석할 때, 자바스크립트 엔진에는 문의 끝이라고 예측되는 지점에 세미콜론을 자동으로 붙여주는 세미콜론 자동 삽입 기능(ASI, automatic semicolon insertion)이 있기 때문에 반드시 붙일 필요는 없다. 하지만 세미콜론 자동 삽입 기능의 예측과 개발자의 예측과 다른 경우가 간혹 있다.
+- - ESLint와 같은 정적 분석 도구에서도 세미콜론 사용을 기본으로 설정하고 있고 TC39(ECMAScript 기술 위원회)도 세미콜론 사용을 권장한다
 
 ## Reference
 
