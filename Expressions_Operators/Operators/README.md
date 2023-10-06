@@ -10,9 +10,13 @@
 
 ## Arithmetic operators : 산술 연산자
 
-## Logical operators : 논리 연산자
-
 ## Bitwise operators : 비트 연산자
+
+- 비트 논리 연산자
+
+- 비트 시프트 연산자
+
+## Logical operators : 논리 연산자
 
 ## String operators : 문자열 연산자
 
