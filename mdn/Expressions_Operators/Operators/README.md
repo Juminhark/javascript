@@ -1,3 +1,8 @@
+# Operator : 연산자
+
+- 연산자(Operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입 연산 등을 수행해 하나의 값을 만든다.
+- 피연산자(Operand)도 평가되어 하나의 값이 되므로 표현식이고 피연산자를 연산자와 결합한 연산자 표현식도 물론 표현식이다.
+
 ## Assignment operators : 할당 연산자
 
 - Assigning to properties : 속성 할당

@@ -1,4 +1,11 @@
-# Array Method
+## Array
+
+## 상속
+
+- Function
+- Object
+
+## method
 
 - arr.from()
 - arr.filter(): callback 후 새로운 배열 생성
@@ -82,5 +89,3 @@ arr.forEach((a) => console.log(a));
 ## Reference
 
 - [8 Must Know JavaScript Array Methods - Web Dev Simplified](https://youtu.be/R8rmfD9Y5-c)
-
-
