@@ -1,7 +1,13 @@
-//? Array.every()
+//? Array.prototype.every()
 
 //? 배열 안의 모든 요소가 주어진 판별 함수를 통과하는지 테스트
 //? Boolean값을 return
+
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold)); // true
 
 const items = [
   { name: 'Bike', price: 100 },

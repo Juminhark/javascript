@@ -2,6 +2,8 @@
 
 //? 주어진 값이 정수인지 판별
 
+// 구문 : Number.isInteger(value)
+
 const fits = (x, y) => {
   if (Number.isInteger(y / x)) {
     return 'Fits!';

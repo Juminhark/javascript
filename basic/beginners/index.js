@@ -1,7 +1,5 @@
-<script>
-
-var object = new Object;
-object.firstName = "John";
+var object = new Object();
+object.firstName = 'John';
 console.log(typeof object);
 
 object = null;
@@ -19,9 +17,8 @@ console.log(typeof undifined);
 var a = 1;
 console.log(typeof a);
 
-var b = "";
+var b = '';
 console.log(typeof b);
 
 var c = true;
 console.log(typeof c);
-</script>
