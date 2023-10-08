@@ -1,10 +1,10 @@
 # JavaScript
 
-- ECMAScript Version
 - [mdn - javascript](mdn)
-- coding_convention
+- [coding_convention](coding_convention)
 - airbnb javascript style guide
 - google javascript style guide
+- [ECMAScript Version](ECMAScript_Version)
 
 ## reference
 
