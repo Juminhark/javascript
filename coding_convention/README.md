@@ -1,7 +1,5 @@
 # Coding Convention
 
-FE개발랩
-
 `코딩 컨벤션은 읽고, 관리하기 쉬운 코드를 작성하기 위한 일종의 코딩 스타일 규약`이다
 자바스크립트는 다른 언어에 비해 유연한 문법구조(동적 타입, this 바인딩, 네이티브 객체 조작 가능)를 갖기 때문에, 개발자 간 통일된 규약이 없다면 코드의 의도를 파악하거나 오류를 찾기 어렵다
 코딩 컨벤션을 준수하면 가독성이 좋아지고, 성능에 영향을 주거나 오류를 발생시키는 잠재적 위험요소를 줄인다.
@@ -388,6 +386,8 @@ function foo() {
 
 - 함수 중간에 예외처리가 있을때, 예외 처리 이후에 사용되는 var 변수의 경우 선언만 집입부에서 하고 할당은 사용 시점에 수행한다 (ES5)
 
+  이러한 경우에도 선언부와 사용시점이 크게 떨어져 가독성이 낮아지는 경우이므로 사용시점에 할당한다.
+
 ```js
 
   // Bad
@@ -423,6 +423,8 @@ function foo(isValid) {
 
 - 선언과 할당의 분리를 허용하는 경우 선언만 하는 변수는 var을 한번만 사용하는 방식을 허용한다 (ES5)
 
+  하나의 var로 여러줄에 걸쳐 변수를 선언할 경우 코드가 쉽게 지저분해질 수 있으므로 한 줄로 선언한다
+
 ```js
 // Bad - 불필요하게 개행
 var foo, bar, quux;
@@ -438,7 +440,7 @@ var quux;
 
 - 선언과 동시에 할당을 하는 변수 먼저 선언한다 (ES5)
 
-  - 선언과 할당을 함께하는 변수와 선언만 하는 변수가 함께 사용될 때, 선언과 동시에 할당을 하는 변수를 그룹화하여 먼저 선언하는 것이 가독성에 좋다.
+  선언과 할당을 함께하는 변수와 선언만 하는 변수가 함께 사용될 때, 선언과 동시에 할당을 하는 변수를 그룹화하여 먼저 선언하는 것이 가독성에 좋다.
 
 ```js
 // Bad
@@ -468,9 +470,141 @@ var foo, bar, quux, item;
 ### 배열과 객체
 
 - 배열과 객체는 반드시 리터럴로 선언한다
-  - 리터럴 표기법은 생성자 함수보다 짧고 명확하며 실수를 줄일 수 있다
+
+  리터럴 표기법은 생성자 함수보다 짧고 명확하며 실수를 줄일 수 있다
 
 > **참고** [ESLint - no-new-object](https://eslint.org/docs/latest/rules/no-new-object)
+
+```js
+// Bad
+const emptyArr = new Array();
+const arr = new Array(1, 2, 3, 4, 5);
+
+// Bad - 객체 생성자 사용
+const emptyObj = new Object();
+const obj = new Object();
+
+// Good
+const emptyArr = [];
+const arr = [1, 2, 3, 4, 5];
+
+// Good
+const emptyObj = {};
+const obj = {
+  pro1: 'val1',
+  pro2: 'val2',
+};
+```
+
+- 배열 복사 시 순환문을 사용하지 않는다
+
+  복잡한 객체를 복사할 때 전개 연산자를 사용하면 좀 더 명확하게 정의할 수 있고 가독성이 좋아진다
+
+> **참고** [mdn - Spread Operator](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+```js
+const len = items.length;
+let i;
+
+// Bad
+for (i = 0; i < len; i++) {
+  itemsCopy[i] = items[i];
+}
+
+// Good
+const itemsCopy = [...items];
+
+// Good - (ES5)
+itemsCopy = items.slice();
+```
+
+- 배열의 시작 괄호 안에 요소가 줄 바꿈으로 시작되었다면 끝 괄호 이전에도 일관된 줄 바꿈 해야한다
+
+  일관된 줄 바꿈 스타일은 협업 개발자 간 코드 가독성을 높혀준다
+
+> **참고** [ESLint - array-braket-newline](https://eslint.org/docs/latest/rules/array-bracket-newline)
+
+```js
+// Bad
+// var a = [1
+// ];
+
+// Good
+var c = [1];
+// var d = [
+//   1
+// ];
+```
+
+- 배열의 요소중하나라도 줄 바꿈이 있다면 배열 안의 요소는 일관되게 모두 줄바꿈을 해주어야 한다
+
+> **참고** [ESLint - array-element-newline](https://eslint.org/docs/latest/rules/array-element-newline)
+
+```js
+// Bad
+// const d = [1,
+//  2, 3];
+
+// Bad
+var g = [
+  function foo() {
+    dosomething();
+  },
+  function bar() {
+    dosomething();
+  },
+];
+
+// Good
+const a = [1, 2, 3];
+// const b = [
+//   1,
+//   2,
+//   3
+// ];
+
+// Good
+var h = [
+  function foo() {
+    dosomething();
+  },
+  function bar() {
+    dosomething();
+  },
+];
+```
+
+- 객체의 프로퍼티가 1개인 경우에만 한 줄 정의를 허용하며, 2개 이상일 경우에는 개행을 강제한다
+
+> **참고** [ESLint - object-property-newline](https://eslint.org/docs/latest/rules/object-property-newline)
+
+```js
+// Bad - 개행
+const obj = { foo: 'a', bar: 'b' };
+
+// Good
+const obj = { foo: 'a' };
+
+// Good
+const obj = {
+  foo: 'a',
+  bar: 'b',
+};
+```
+
+- 객체 리터럴 정의 시 콜론 앞은 공백을 허용하지 않으며 콜론 뒤는 항상 공백을 강제한다
+
+```js
+// Bad
+// var obj = {
+//   foo : 'a',
+// };
+
+// Good
+var obj = {
+  foo: 'a',
+};
+```
 
 ### 함수
 
