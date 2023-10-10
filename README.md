@@ -1,11 +1,11 @@
 # JavaScript
 
 - [mdn - javascript](mdn)
-- [33concepts of javascript](33concepts)
-- [coding convention](coding_convention)
+- [33concepts of javascript](33concepts/README.md)
+- [coding convention](coding_convention/README.md)
 - airbnb javascript style guide
 - google javascript style guide
-- [ECMAScript Version](ECMAScript_Version)
+- [ECMAScript Version](ECMAScript_Version/README.md)
 
 ## reference
 

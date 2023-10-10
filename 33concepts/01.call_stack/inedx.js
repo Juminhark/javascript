@@ -1,19 +1,20 @@
 //? 1. Call Stack
+
 //* javascript가 함수 실행을 control(handle)하는 방법.
 
 function three() {
-	console.log('i love js');
-	throw Error('omg error');
+  console.log('i love js');
+  throw Error('omg error');
 }
 function two() {
-	three();
+  three();
 }
 function one() {
-	two();
+  two();
 }
 function zero() {
-	one();
-	// throw Error('omg error');
+  one();
+  // throw Error('omg error');
 }
 
 zero();
