@@ -7,10 +7,12 @@
 - google javascript style guide
 - [ECMAScript Version](ECMAScript_Version/README.md)
 - [Nuggets](nuggets)
+- [note](note)
 
 ## reference
 
 - [mdn web docs - javascript](https://developer.mozilla.org/ko/docs/Web/JavaScript)
+- [모던 자바스크립트](https://ko.javascript.info/)
 - [leonardomso - 33-js-concepts](https://github.com/leonardomso/33-js-concepts)
 - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)

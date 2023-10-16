@@ -1,5 +1,7 @@
 //? String.prototype.substring()
 
+//? str.substring(indexStart[, indexEnd])
+
 //? sting객체의 시작인덱스부터 [종료인덱스] 전 까지 부분 문자열 반환
 
 const str = 'Mozilla';

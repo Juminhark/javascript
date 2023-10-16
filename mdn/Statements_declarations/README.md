@@ -4,6 +4,53 @@
 - 한 문이 여러줄에 걸칠 수 있다
 - 여러 문은 각 문이 세미콜론으로 구분된 경우 한 줄에 나올수 있다. 이는 키워드 하나가 아니라, 키워드 그룹이다
 
+## category
+
+control flow : 흐름 제어
+
+- return
+- block : {...}
+- break
+- continue
+- empty
+- if ... else
+- switch
+- throw
+- try ... catch
+
+declaring variables : 선언
+
+- var
+- let
+- const
+
+functions and classes : 함수 및 클래스
+
+- function
+- function\*
+- async function
+- async function\*
+- class
+
+Iterations : 반복
+
+- do ... while
+- for
+- for ... in
+- for ... of
+- for await ... of
+- while
+
+기타
+
+- Empty
+- Block
+- Expression statement
+- debugger
+- export
+- import
+- label
+
 ## 문(statement)과 표현식
 
 - Statement(문)은 자바스크립트 엔진에게 내리는 명령이다.
@@ -46,47 +93,8 @@ x = 100; // 이 자체가 표현식이지만 완전한 문이기도 하다.
   - 자바스크립트 엔진이 스크립트를 해석할 때, 자바스크립트 엔진에는 문의 끝이라고 예측되는 지점에 세미콜론을 자동으로 붙여주는 세미콜론 자동 삽입 기능(ASI, automatic semicolon insertion)이 있기 때문에 반드시 붙일 필요는 없다. 하지만 세미콜론 자동 삽입 기능의 예측과 개발자의 예측과 다른 경우가 간혹 있다.
   - ESLint와 같은 정적 분석 도구에서도 세미콜론 사용을 기본으로 설정하고 있고 TC39(ECMAScript 기술 위원회)도 세미콜론 사용을 권장한다
 
-## category
-
-### 흐름 제어
-
-- block : {...}
-- break
-- continue
-- empty
-- if ... else
-- switch
-- throw
-- try ... catch
-
-### 선언
-
-- var
-- let
-- const
-
-### 함수 및 클래스
-
-- function
-- function\*
-- return
-- class
-
-### 반복
-
-- do ... while
-- for
-- for ... in
-- for ... of
-- while
-
-### 기타
-
-- debugger
-- export
-- import
-- label
+## await
 
 ## reference
 
-- [Statements](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements)
+- [mdn - Statements and declarations](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements)

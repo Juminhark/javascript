@@ -8,52 +8,54 @@
 
 ## 항목별 표준 객체
 
-### 값 속성
+값 속성
 
 - Infinity
 - NaN
 - undefined
 - globalThis
 
-### 함수 속성
+함수 속성
 
 - isNaN()
 - parseInt()
 
-### 기초 객체
+기초 객체
 
 - Object
 - Function
 - Boolean
 - Symbol
 
-### 숫자 및 날짜
+숫자 및 날짜
 
 - Number
 - BigInt
 - Math
 - Date
 
-### 텍스트 처리
+텍스트 처리
 
 - String
 - RegExp
 
-### 인덱스 콜렉션
+인덱스 콜렉션
 
 - Array
 
-### 키 콜렉션
+키 콜렉션
 
 - Map
 
-### 구조화된 데이터
+구조화된 데이터
 
 - JSON
 
-### 제어 추상화 객체
+제어 추상화 객체
 
 - Promise
+- Generator
+- AsyncFunction
 
 ## reference
 
