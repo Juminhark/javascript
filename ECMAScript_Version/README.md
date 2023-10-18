@@ -15,3 +15,7 @@
 | ES11 | ECMAScript 2020     | The Nullish Coalescing Operator (??) <br> BigInt primitive type                                                                                                                     |
 | ES12 | ECMAScript 2021     | String.repalceAll() <br> Promise.any()                                                                                                                                              |
 | ES13 | ECMAScript 2022     | Top-level await <br> New class elements <br> Static block inside classes                                                                                                            |
+
+## reference
+
+- [js versions](https://www.w3schools.com/js/js_versions.asp)
