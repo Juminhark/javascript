@@ -33,3 +33,11 @@ const run = async () => {
 
 console.log(run());
 // Promise { <pending> } : async 는 promise를 return한다
+
+// 예시
+async function logJSONData() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const jsonData = await response.json();
+  console.log(jsonData);
+}
+logJSONData();

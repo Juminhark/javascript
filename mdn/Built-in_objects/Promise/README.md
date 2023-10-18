@@ -10,6 +10,46 @@
 
 ## then, catch
 
+## neted & chaining
+
+```js
+const job1 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('job1 ok');
+    }, 2000);
+  });
+};
+
+const job2 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('job2 ok');
+    }, 2000);
+  });
+};
+
+// nested promise
+// job1().then((data) => {
+//   console.log('data1', data);
+//   job2().then((data) => {
+//     console.log('data2', data);
+//   });
+// });
+
+// promise chaining
+job1()
+  .then((data) => {
+    console.log('data1', data);
+    return job2();
+  })
+  .then((data) => {
+    console.log('data2', data);
+  });
+```
+
+## all & race
+
 ## reference
 
 - [mdn - promise](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
