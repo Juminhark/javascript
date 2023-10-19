@@ -14,13 +14,15 @@
 //? 2. Variable, rw(read / write)
 // let (added in ES6)
 
+// Global Scope : 여기서 변수가 정의 될 경우 어플리케이션의 시작부터 종류까지 항상 메모리에 남겨질수 있으니 사용에 주의해야한다
 let globalName = 'global name';
 {
-	let name = 'Ellie';
-	console.log(name);
-	name = 'hello';
-	console.log(name);
-	console.log(globalName);
+  // Block Scope
+  let name = 'Ellie';
+  console.log(name);
+  name = 'hello';
+  console.log(name);
+  console.log(globalName);
 }
 // console.log(name); //error
 console.log(globalName);
@@ -31,14 +33,14 @@ console.log(globalName);
 //! has no block scope : scope를 무시한다.
 
 {
-	console.log(age);
-	age = 4;
-	console.log(age);
-	var age;
+  console.log(age);
+  age = 4;
+  console.log(age);
+  var age;
 }
 console.log(age);
 
-//? 3. Constant, r(read only)
+//? 3. Constant, r(read only) : 상수
 // use const whenever possible.
 // only use let if variable needs to change.
 
@@ -48,6 +50,8 @@ const maxNumber = 5;
 // Note!
 // Immutable data types: primitive types, frozen objects (i.e. object.freeze())
 // Mutable data types: all objects by default are mutable in JS
+
+// 가능하면 변경되지 않는 데이터 타입을 사용
 // favor immutable data type always for a few reasons:
 //  - security : 보안
 //  - thread safety : 여러 thread가 접근 가능한 변수가 변동되는것을 방지
@@ -56,7 +60,9 @@ const maxNumber = 5;
 //? 4. Variable types
 // primitive, single item : number, string, boolean, null, undefined, symbol
 // object, box container
-// function, first-class function
+// function, first-class function : 변수 할당 가능 -> 콜백함수
+
+// c 경우 low-level 언어라 memory 관리가 세세하게 가능
 
 //! primitive 변수는 값을 바로 참조, object 변수는 reference 를 참조.
 //! java에서는 primitive type은 data가 stack 영역에 생성.
@@ -72,12 +78,13 @@ console.log(`value: ${size}, type: ${typeof size}`);
 const infinity = 1 / 0;
 const negativeInfinity = -1 / 0;
 const nAn = 'not a number' / 2;
-console.log(infinity);
-console.log(negativeInfinity);
-console.log(nAn);
+console.log(infinity); // Infinity
+console.log(negativeInfinity); // -Infinity
+console.log(nAn); // NaN
 
 // bigInt (fairly new, don`t use it yet)
-const bigInt = 1231234123445643589674986789347568946893457678937459689436798436n; // over (-2**53 ~ 2**53)
+const bigInt =
+  1231234123445643589674986789347568946893457678937459689436798436n; // over (-2**53 ~ 2**53)
 console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
 Number.MAX_SAFE_INTEGER;
 

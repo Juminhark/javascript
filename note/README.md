@@ -114,15 +114,6 @@ function canDrinkResponse(age) {
 canDrinkBest(p);
 ```
 
-## [Function.prototype.bind()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
-
-```js
-positionMatch.bind(null, position))
-
-// .bind() 의 첫번째 인자에 값을 대입하며 진행
-
-```
-
 ## don`t write long functions : 가독성의 문제
 
 ```js
@@ -194,6 +185,65 @@ function getContact(emailOrId) {
     })
 }
 // #endregion
+```
+
+## [script async / defer](https://www.youtube.com/watch?v=tJieVCgGzhs)
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="main.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<body>
+  <div></div>
+  <script src="main.js"></script>
+</body>
+</html>
+```
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script asyn src="main.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script defer src="main.js"></script>
+</head>
+<body>
+
+</body>
+</html>
 ```
 
 ## reference
