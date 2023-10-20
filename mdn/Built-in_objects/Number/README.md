@@ -25,7 +25,7 @@
 ```
 
 - Number는 소수점 이하 17자리 정도만 유지하며 산술은 반올림의 대상이 된다
-- Number가 가질수 있는 가장 큰 값은 1.8E308 이보다 큰수는 상수 Infinity로 대체
+- Number가 가질수 있는 가장 큰 값은 1.8E308 이보다 큰수는 상수 Infinity로 대체 => BigInt
 
 ## Number coercion
 

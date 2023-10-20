@@ -1,3 +1,16 @@
+# [자바스크립트 기초 강의 (ES5+) - 드림코딩](https://youtube.com/playlist?list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&si=7-Cvw5V9HyG4PP1N)
+
+- script async와 defer의 차이점
+- data types, let vs var, hoisting
+- operator, if, for loop
+- arrow function, 함수의 선언과 표현
+- class vs object
+- array 개념과 apis 정리
+- json
+- callback
+- promise
+- async await
+
 ## Guard Clauses
 
 - 변수의 선언 및 할당, 파라미터의 유효성, 참조하는 객체의 올바른 생성 등 조건을 체크하는 경우
@@ -245,7 +258,3 @@ function getContact(emailOrId) {
 </body>
 </html>
 ```
-
-## reference
-
-- [js기초 - 드림코딩](https://youtube.com/playlist?list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&si=7-Cvw5V9HyG4PP1N)

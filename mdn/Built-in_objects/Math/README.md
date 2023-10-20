@@ -27,7 +27,12 @@
 
 ## Static methods : 메소드
 
-- Math.sqrt()
+- Math.abs(x) : 절대값
+- Math.ceil(x) : 올림
+- Math.floor(x) : 내림
+- Math.round(x) : 반올림
+- Math.sqrt(x) : 제곱근
+- Math.pow(x, y) : x의 y제곱근
 
 ```js
 // 사용 예시 : 약수 구하기

@@ -1,4 +1,4 @@
-# Built-in objects : 표준 내장 객체
+# [Built-in objects : 표준 내장 객체](<(https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects)>)
 
 **표준 내장 객체와 전역객체를 헷갈리지 않도록 주의.**
 
@@ -56,7 +56,3 @@
 - Promise
 - Generator
 - AsyncFunction
-
-## reference
-
-- [MDN - 표준내장객체](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects)

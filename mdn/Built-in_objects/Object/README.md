@@ -8,3 +8,6 @@
 
 - Object.keys()
 - Object.values()
+- Object.toString()
+- Object.freeze()
+- Object.create()
