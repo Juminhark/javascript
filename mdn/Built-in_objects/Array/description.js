@@ -61,7 +61,7 @@ let myArray = [];
 myArray.push(0); //[ 0 ]
 myArray.push(2); //[ 0, 2 ]
 myArray.push(7); //[ 0, 2, 7]
-myArray.pop; //[ 0, 2 ]
+myArray.pop(); //[ 0, 2 ]
 console.log(myArray);
 
 let myArray = ['world', 'hello'];
@@ -74,7 +74,7 @@ let myArray = [];
 myArray.push(0); //[ 0 ]
 myArray.push(2); //[ 0, 2 ]
 myArray.push(7); //[ 0, 2, 7]
-myArray.shift; //[ 2, 7 ]
+myArray.shift(); //[ 2, 7 ]
 console.log(myArray);
 /* index가 바뀐다 */
 
