@@ -37,3 +37,10 @@ t = 'caaaaaaandy';
 re.test(t); // true : 모든 a 와 대응
 t = 'cndy';
 re.test(t); // false
+
+// D : 숫자 아님
+// + : 하나 이상
+re = /\D+/g;
+
+t = 'aAb1B2cC34oOp';
+console.log(t.match(re));
