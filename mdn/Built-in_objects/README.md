@@ -56,3 +56,23 @@
 - Promise
 - Generator
 - AsyncFunction
+
+## 자주 쓰는 method
+
+String
+
+- String.slice()
+- String.split()
+- String.substring()
+- String.replace()
+
+Array
+
+- Array.join()
+- Array.reduce()
+
+Math
+
+- Math.floor()
+- Math.max()
+- Math.pow(x, y) : x \*\* y
