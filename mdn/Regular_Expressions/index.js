@@ -2,6 +2,9 @@
 let re = /ab+c/;
 re = new RegExp('ab+c');
 
+let reg = new RegExp(/[0-9]/, 'g');
+reg = /[0-9]/g;
+
 // ^ : 입력의 시작부분을 대응
 re = /^A/;
 

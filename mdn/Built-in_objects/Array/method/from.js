@@ -8,7 +8,7 @@
 //? thisArg : mapFn 실행시에 this로 사용할 값.
 //? return value : 새로운 Array 인스턴스
 
-console.log(Array.from('foo')); // [ 2, 4, 6 ]
+console.log(Array.from('foo')); // [ 'f', 'o', 'o']
 
 console.log(Array.from([1, 2, 3], (x) => x + x)); // [ 2, 4, 6 ]
 
