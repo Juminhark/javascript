@@ -8,6 +8,7 @@
 - [ECMAScript Version](ECMAScript_Version/README.md)
 - [Nuggets](nuggets)
 - [note](note)
+- [snippet](snippet/README.md)
 
 ## reference
 
